@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ESS Topic 2.2</title>
+
+  <!-- Shared Reson/Bloome design system (base tokens + BW layer) -->
+  <link rel="stylesheet" href="/slides/reson-shared.css" />
+
+  <!-- Sora font (used by Bloome slides) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Slide-specific styles -->
+  <style>
+    /* Slide layout and styling loaded from shared stylesheet /slides/reson-shared.css */
+    .slide-img {
+      width: 100%;
+      max-width: 680px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin: 16px auto;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+  </style>
+
+  <!-- Reson widget bridge (must load before body) -->
+  <script src="/slides/reson-init.js"></script>
+</head>
+<body class="bw">
+<div id="progress" style="width:0%"></div>
+
+<div id="deck">
+
+<!-- ==================== SLIDE 1: TITLE ==================== -->
+<div class="slide active" data-sec="intro">
+  <div style="text-align:center;padding:40px 0 20px">
+    <div class="section-tag">IB DP Environmental Systems &amp; Societies</div>
+    <h1>Energy &amp; Biomass<br/>in Ecosystems</h1>
+    <p class="subtitle">Subtopic 2.2 — New Syllabus (First Assessment 2026)<br/>Standard Level + Higher Level</p>
+    <div style="margin-top:30px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+      <div class="card" style="flex:1;min-width:180px;text-align:center;border-left:3px solid var(--blue)">
+        <div style="font-size:28px;margin-bottom:4px">⚡</div>
+        <div style="font-size:13px;font-weight:600">21 SL Syllabus Points</div>
+        <div style="font-size:12px;color:var(--muted)">2.2.1 – 2.2.21</div>
+      </div>
+      <div class="card" style="flex:1;min-width:180px;text-align:center;border-left:3px solid var(--orange)">
+        <div style="font-size:28px;margin-bottom:4px">🔬</div>
+        <div style="font-size:13px;font-weight:600">7 HL Extensions</div>
+        <div style="font-size:12px;color:var(--muted)">2.2.23 – 2.2.29</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 2: OVERVIEW ==================== -->
+<div class="slide" data-sec="intro">
+  <div class="section-tag">Overview</div>
+  <h2>What You Need to Know</h2>
+  <p class="lead">This subtopic examines how energy flows and matter cycles through ecosystems, why energy transfer is inefficient, and how human activities disrupt these natural processes.</p>
+  <h3>Guiding Questions</h3>
+  <ul class="bullets">
+    <li>How can flows of energy and matter through ecosystems be modelled?</li>
+    <li>How do human actions affect the flow of energy and matter, and what is the impact on ecosystems?</li>
+    <li>What strategies can be employed to mitigate human impacts on the natural cycles of energy and matter?</li>
+  </ul>
+  <h3 style="margin-top:20px">Content Map</h3>
+  <div class="card-grid cols-3">
+    <div class="card"><strong style="color:var(--blue)">A. Energy Fundamentals</strong><br/><span style="font-size:13px;color:var(--muted)">Laws of thermodynamics, photosynthesis, respiration</span></div>
+    <div class="card"><strong style="color:var(--blue)">B. Trophic Transfer</strong><br/><span style="font-size:13px;color:var(--muted)">Food chains, webs, pyramids, productivity</span></div>
+    <div class="card"><strong style="color:var(--blue)">C. Human Impacts</strong><br/><span style="font-size:13px;color:var(--muted)">Bioaccumulation, pollution, human activities</span></div>
+  </div>
+  <div class="tip">Time allocation: minimum 6 hours for this subtopic. The exam often tests energy flow calculations and bioaccumulation chains.</div>
+</div>
+
+<!-- ==================== SLIDE 3: 2.2.1 ==================== -->
+<div class="slide" data-sec="energy">
+  <div class="section-tag">2.2.1</div>
+  <h2>Ecosystems Are Sustained by Energy &amp; Matter</h2>
+  <div class="kt"><strong>Key Understanding</strong>Ecosystems are <em>open systems</em> — they continuously exchange both energy and matter with their surroundings. Energy flows <em>through</em> ecosystems (one direction), while matter is <em>recycled within</em> them.</div>
+  <div class="flow">
+    <div class="flow-node sun">☀️ Solar<br/>Energy</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node producer">🌿 Producers<br/>(Autotrophs)</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node consumer">🐾 Consumers<br/>(Herbivores → Carnivores)</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node decomp">🍄 Decomposers<br/>&amp; Detritivores</div>
+  </div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Energy Flow</h3>
+      <p style="font-size:14px">Enters as sunlight → converted to chemical energy by producers → passed through consumers → exits as <strong>heat</strong>. Energy is <strong>not recycled</strong> — a constant supply from the sun is required.</p>
+    </div>
+    <div class="card">
+      <h3>Matter Cycling</h3>
+      <p style="font-size:14px">Elements (C, N, P, etc.) cycle through biotic and abiotic components via <strong>biogeochemical cycles</strong>. Decomposers break down dead organic matter, returning nutrients to the soil/atmosphere for reuse.</p>
+    </div>
+  </div>
+  <div class="tip">If asked why ecosystems need a constant energy input but not a constant matter input — energy is lost as heat at each transfer, but matter is recycled.</div>
+</div>
+
+<!-- ==================== SLIDE 4: 2.2.2 ==================== -->
+<div class="slide" data-sec="energy">
+  <div class="section-tag">2.2.2</div>
+  <h2>The First Law of Thermodynamics</h2>
+  <div class="kt"><strong>Key Understanding</strong>Energy can be <em>transformed</em> from one form to another but cannot be <em>created or destroyed</em>. The total energy in a closed system remains constant.</div>
+  <div class="eq">
+    <span class="label">In ecosystems</span>
+    Solar Energy <span class="arrow">→</span> Chemical Energy <span class="arrow">→</span> Kinetic Energy + Heat
+  </div>
+  <h3>Application to Ecosystems</h3>
+  <ul class="bullets">
+    <li><strong>Solar energy</strong> is captured by producers and converted to <strong>chemical energy</strong> (glucose/biomass)</li>
+    <li>Chemical energy is <strong>transferred</strong> between trophic levels as organisms eat each other</li>
+    <li>At each transfer, some energy becomes <strong>heat</strong> — it is still "there" (conserved) but no longer usable by organisms</li>
+    <li>Energy that enters as sunlight eventually exits as heat — it does not cycle</li>
+  </ul>
+  <div class="tip">The first law is why you can never have an ecosystem that recycles energy. You always need the sun. This contrasts with matter, which cycles via biogeochemical cycles.</div>
+</div>
+
+<!-- ==================== SLIDE 5: 2.2.3 ==================== -->
+<div class="slide" data-sec="energy">
+  <div class="section-tag">2.2.3</div>
+  <h2>Photosynthesis &amp; Cellular Respiration</h2>
+  <div class="kt"><strong>Key Understanding</strong>These two complementary processes transform energy and matter in ecosystems, forming the foundation of all energy flow.</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3 style="color:#10b981">🌿 Photosynthesis</h3>
+      <div class="eq" style="font-size:14px;margin:8px 0">
+        6CO₂ + 6H₂O + <strong>light energy</strong> <span class="arrow">→</span> C₆H₁₂O₆ + 6O₂
+      </div>
+      <p style="font-size:13px"><strong>Location:</strong> Chloroplasts (in chlorophyll)<br/>
+      <strong>Input:</strong> CO₂, water, sunlight<br/>
+      <strong>Output:</strong> Glucose + Oxygen<br/>
+      <strong>Transformation:</strong> Light energy → chemical energy</p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--orange)">🔬 Cellular Respiration</h3>
+      <div class="eq" style="font-size:14px;margin:8px 0">
+        C₆H₁₂O₆ + 6O₂ <span class="arrow">→</span> 6CO₂ + 6H₂O + <strong>ATP energy</strong>
+      </div>
+      <p style="font-size:13px"><strong>Location:</strong> Mitochondria<br/>
+      <strong>Input:</strong> Glucose + Oxygen<br/>
+      <strong>Output:</strong> CO₂ + Water + ATP<br/>
+      <strong>Transformation:</strong> Chemical energy → usable energy + heat</p>
+    </div>
+  </div>
+  <div class="kt" style="margin-top:12px"><strong>The Cycle</strong>Photosynthesis produces the glucose and O₂ that respiration needs. Respiration produces the CO₂ and H₂O that photosynthesis needs. Together they close the matter cycle while driving energy flow.</div>
+</div>
+
+<!-- ==================== SLIDE 6: 2.2.4 ==================== -->
+<div class="slide" data-sec="energy">
+  <div class="section-tag">2.2.4</div>
+  <h2>Photosynthesis: Light Energy → Biomass</h2>
+  <div class="kt"><strong>Key Understanding</strong>Photosynthesis converts light energy to chemical energy (glucose). Some glucose is stored as <em>biomass</em> by autotrophs — this is the energy available to the rest of the food chain.</div>
+  <h3>What Happens to the Glucose?</h3>
+  <div class="card">
+    <ul class="bullets">
+      <li><strong>Immediate use:</strong> Glucose is broken down via respiration for the plant's own metabolic needs</li>
+      <li><strong>Storage:</strong> Converted to starch for later energy use</li>
+      <li><strong>Biomass formation:</strong> Converted to cellulose, proteins, lipids → structural components of the plant</li>
+    </ul>
+  </div>
+  <div class="kt"><strong>Biomass</strong> = the stored energy and organic matter in living (or recently living) organisms. It is what gets passed along to the next trophic level when an organism is eaten.</div>
+  <div class="tip">Biomass is not the same as "weight." It specifically refers to the organic content (excluding water) — this is why we dry samples before measuring it.</div>
+</div>
+
+<!-- ==================== SLIDE 7: 2.2.5 ==================== -->
+<div class="slide" data-sec="trophic">
+  <div class="section-tag">2.2.5</div>
+  <h2>Producers: The First Trophic Level</h2>
+  <div class="kt"><strong>Key Understanding</strong>Producers (autotrophs) form the <em>first trophic level</em> in every food chain. They are the only organisms that introduce new energy into the ecosystem.</div>
+  <div class="card">
+    <h3>Types of Producers</h3>
+    <table class="tbl">
+      <tr><th>Type</th><th>Habitat</th><th>Examples</th></tr>
+      <tr><td><strong>Terrestrial plants</strong></td><td>Land ecosystems</td><td>Grasses, trees, shrubs, mosses</td></tr>
+      <tr><td><strong>Algae</strong></td><td>Freshwater &amp; marine</td><td>Diatoms, kelp, seaweed</td></tr>
+      <tr><td><strong>Photosynthetic bacteria</strong></td><td>Various (incl. extreme environments)</td><td>Cyanobacteria, purple sulfur bacteria</td></tr>
+    </table>
+  </div>
+  <h3>Why Producers Are Essential</h3>
+  <ul class="bullets">
+    <li><strong>Energy gateway:</strong> Only entry point for solar energy into ecosystems</li>
+    <li><strong>Oxygen production:</strong> Release O₂ needed for respiration by most organisms</li>
+    <li><strong>Carbon fixation:</strong> Remove CO₂ from atmosphere, regulating climate</li>
+    <li><strong>Habitat:</strong> Physical structure for many species (e.g., trees in forests)</li>
+    <li><strong>Hydrological cycle:</strong> Transpiration contributes to atmospheric moisture</li>
+  </ul>
+</div>
+
+<!-- ==================== SLIDE 8: 2.2.6 ==================== -->
+<div class="slide" data-sec="trophic">
+  <div class="section-tag">2.2.6</div>
+  <h2>Cellular Respiration: Releasing Energy</h2>
+  <div class="kt"><strong>Key Understanding</strong>Cellular respiration releases energy from glucose by converting it into <em>ATP</em> (adenosine triphosphate) — a chemical form that can easily be used in carrying out active processes within living cells.</div>
+  <div class="card">
+    <h3>What is ATP?</h3>
+    <p style="font-size:14px">ATP is the "energy currency" of cells. It powers:</p>
+    <div class="card-grid cols-2" style="margin-top:8px">
+      <div style="font-size:13px">• <strong>Muscle contraction</strong> — movement<br/>• <strong>Cell division</strong> — growth &amp; repair<br/>• <strong>Active transport</strong> — moving molecules across membranes</div>
+      <div style="font-size:13px">• <strong>Biosynthesis</strong> — building proteins, DNA<br/>• <strong>Nerve impulses</strong> — signal transmission<br/>• <strong>Reproduction</strong> — gamete production</div>
+    </div>
+  </div>
+  <div class="eq">
+    <span class="label">Simplified equation</span>
+    Glucose + Oxygen <span class="arrow">→</span> CO₂ + Water + <strong>ATP</strong> (+ heat)
+  </div>
+  <div class="tip">Every organism that performs cellular respiration — plants included — loses some energy as heat. This is why plants also contribute (slightly) to heat loss in ecosystems.</div>
+</div>
+
+<!-- ==================== SLIDE 9: 2.2.7 ==================== -->
+<div class="slide" data-sec="trophic">
+  <div class="section-tag">2.2.7</div>
+  <h2>Energy Transformed to Heat</h2>
+  <div class="kt"><strong>Key Understanding</strong>Energy transformations are inefficient. In living cells, cellular respiration transforms chemical energy into work, but a large portion is lost as <em>heat energy</em> to the surroundings.</div>
+  <p>Heat released during respiration cannot be converted back into chemical energy by living things — it is lost from the biological system forever.</p>
+</div>
+
+<!-- ==================== SLIDE 10: 2.2.8 ==================== -->
+<div class="slide" data-sec="trophic">
+  <div class="section-tag">2.2.8</div>
+  <h2>The Second Law of Thermodynamics</h2>
+  <div class="kt"><strong>Key Understanding</strong>When energy is transformed, the amount of usable energy decreases as entropy (disorder) increases. No energy transformation is 100% efficient.</div>
+  <div class="tip">The second law explains why food chains rarely have more than 4 or 5 trophic levels — so much energy is lost as heat at each step that there isn't enough left to support a viable population of higher-level predators.</div>
+</div>
+
+<!-- ==================== SLIDE 11: 2.2.9 ==================== -->
+<div class="slide" data-sec="trophic">
+  <div class="section-tag">2.2.9</div>
+  <h2>Consumers: Diverse Energy Strategies</h2>
+  <div class="kt"><strong>Key Understanding</strong>Consumers gain chemical energy from carbon (organic) compounds obtained from <em>other organisms</em>. They have diverse strategies for obtaining these energy-containing compounds.</div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Strategy</th><th>Description</th><th>Examples</th></tr>
+      <tr><td><strong>Herbivory</strong></td><td>Feed on living plants/algae</td><td>Deer, rabbits, caterpillars, zooplankton</td></tr>
+      <tr><td><strong>Predation</strong></td><td>Hunt and kill other animals</td><td>Lions, eagles, spiders, sharks</td></tr>
+      <tr><td><strong>Parasitism</strong></td><td>Live on/in host, extract nutrients</td><td>Tapeworms, fleas, mistletoe</td></tr>
+      <tr><td><strong>Detritivory</strong></td><td>Feed on dead organic matter (detritus)</td><td>Earthworms, millipedes, woodlice</td></tr>
+      <tr><td><strong>Saprotrophy</strong></td><td>Secrete enzymes onto dead matter, absorb nutrients</td><td>Fungi, decomposer bacteria</td></tr>
+      <tr><td><strong>Scavenging</strong></td><td>Feed on already-dead animals</td><td>Vultures, hyenas, crabs</td></tr>
+    </table>
+  </div>
+  <div class="tip">In exam questions, being able to classify an organism's feeding strategy is often required. "Detritivore" and "saprotroph" are commonly confused — detritivores <em>ingest</em> dead matter; saprotrophs <em>absorb</em> externally digested nutrients.</div>
+</div>
+
+<!-- ==================== SLIDE 12: 2.2.10 ==================== -->
+<div class="slide" data-sec="foodchain">
+  <div class="section-tag">2.2.10</div>
+  <h2>Food Chains: Producers to Consumers</h2>
+  <div class="kt"><strong>Key Understanding</strong>Producers make their own carbon compounds by photosynthesis → they start food chains. Consumers obtain carbon compounds from producers or other consumers → they form subsequent trophic levels.</div>
+  <img src="/slides/images/ess-2-2-food-web.jpg" alt="Forest Food Web Energy Flow" class="slide-img" />
+  <div class="eq" style="font-size:15px">
+    <span class="label">Example food chain</span>
+    Grass <span class="arrow">→</span> Grasshopper <span class="arrow">→</span> Frog <span class="arrow">→</span> Snake <span class="arrow">→</span> Hawk
+  </div>
+  <div class="card-grid cols-2" style="margin-top:12px">
+    <div class="card">
+      <h3>Reading Food Chains</h3>
+      <ul class="bullets">
+        <li>Arrows show the <strong>direction of energy flow</strong> (not "who eats whom" — though that's implied)</li>
+        <li>The arrow points <strong>from the food → to the eater</strong></li>
+        <li>Each organism feeds at a specific <strong>trophic level</strong></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Trophic Levels</h3>
+      <ul class="bullets">
+        <li><strong>Level 1:</strong> Producers (grass)</li>
+        <li><strong>Level 2:</strong> Primary consumers (herbivore)</li>
+        <li><strong>Level 3:</strong> Secondary consumer (carnivore)</li>
+        <li><strong>Level 4:</strong> Tertiary consumer (top carnivore)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tip">Exam skill: Given data, construct a food chain and label all trophic levels. Arrows always point in the direction of energy transfer.</div>
+</div>
+
+<!-- ==================== SLIDE 13: 2.2.11 ==================== -->
+<div class="slide" data-sec="foodchain">
+  <div class="section-tag">2.2.11</div>
+  <h2>Carbon Compounds &amp; Trophic Levels</h2>
+  <div class="kt"><strong>Key Understanding</strong>Carbon compounds and the energy they contain are passed from one organism to the next in a food chain. The stages in a food chain are called <em>trophic levels</em>.</div>
+  <div class="card">
+    <h3>What Moves Between Trophic Levels?</h3>
+    <p style="font-size:14px">It's not just "energy" in the abstract — it is <strong>carbon compounds</strong> (organic molecules like glucose, proteins, fats) that carry both matter AND energy. When a rabbit eats grass, it gains carbon-based molecules that the grass built from CO₂.</p>
+  </div>
+  <h3>Role of Decomposers</h3>
+  <ul class="bullets">
+    <li>Not shown in simple linear food chains, but present in all ecosystems</li>
+    <li>Gain carbon compounds from <strong>dead organisms at all trophic levels</strong></li>
+    <li>Recycle matter back to the abiotic environment → available for producers</li>
+    <li>Form the base of <strong>detrital food webs</strong> (parallel to grazing food webs)</li>
+  </ul>
+</div>
+
+<!-- ==================== SLIDE 14: 2.2.12 ==================== -->
+<div class="slide" data-sec="foodchain">
+  <div class="section-tag">2.2.12</div>
+  <h2>Energy Losses Along Food Chains</h2>
+  <div class="kt"><strong>Key Understanding</strong>There are <em>losses of energy and organic matter</em> as food is transferred along a food chain. Not all energy available at one level reaches the next.</div>
+  <img src="/slides/images/ess-2-2-energy-flow.jpg" alt="Trophic Energy Flow &amp; 10% Rule Pyramid" class="slide-img" />
+  <div class="card">
+    <h3>Where Does Energy Go?</h3>
+    <table class="tbl">
+      <tr><th>Stage of Loss</th><th>Mechanism</th></tr>
+      <tr><td><strong>1. Not eaten</strong></td><td>Some organisms/parts are never consumed (thorns, bones, roots)</td></tr>
+      <tr><td><strong>2. Not digested</strong></td><td>Indigestible material passes through as faeces (cellulose, shells)</td></tr>
+      <tr><td><strong>3. Not assimilated</strong></td><td>Some absorbed energy used immediately for metabolism, not stored as biomass</td></tr>
+      <tr><td><strong>4. Respiration heat loss</strong></td><td>Cellular respiration converts energy to ATP + heat; heat is lost permanently</td></tr>
+    </table>
+  </div>
+  <div class="kt"><strong>Net result:</strong> Only about <strong>10%</strong> of the energy stored as biomass at one trophic level is converted to biomass at the next level. The rest is lost through the mechanisms above.</div>
+</div>
+
+<!-- ==================== SLIDE 15: 2.2.13 ==================== -->
+<div class="slide" data-sec="productivity">
+  <div class="section-tag">2.2.13</div>
+  <h2>Gross Productivity &amp; Net Productivity</h2>
+  <div class="kt"><strong>Key Understanding</strong>Gross productivity (GP) is the <em>total gain</em> in biomass. Net productivity (NP) is what remains <em>after losses due to cellular respiration</em>.</div>
+  <div class="eq">
+    <span class="label">The Formula</span>
+    NP = GP − R
+  </div>
+  <div style="text-align:center;font-size:14px;color:var(--muted);margin-bottom:14px">Net Productivity = Gross Productivity minus Respiration losses</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Gross Productivity (GP)</h3>
+      <ul class="bullets">
+        <li><strong>Total</strong> biomass produced by an organism/trophic level over a given time</li>
+        <li>For producers: total photosynthesis (all glucose made)</li>
+        <li>For consumers: total energy from all food eaten</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Net Productivity (NP)</h3>
+      <ul class="bullets">
+        <li>Biomass <strong>remaining</strong> after the organism uses some for respiration</li>
+        <li>Available for <strong>growth, reproduction,</strong> and consumption by the next level</li>
+        <li>This is what's available to herbivores/carnivores</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="background:var(--bg)">
+    <h3>Worked Example</h3>
+    <p style="font-size:14px">A plant captures <strong>100 units</strong> of energy via photosynthesis (GP = 100). It uses <strong>40 units</strong> for respiration (R = 40).<br/>
+    <strong>NP = 100 − 40 = 60 units</strong> → available for growth and for herbivores to consume.</p>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 16: 2.2.14 ==================== -->
+<div class="slide" data-sec="productivity">
+  <div class="section-tag">2.2.14</div>
+  <h2>Limited Trophic Levels</h2>
+  <div class="kt"><strong>Key Understanding</strong>The number of trophic levels in ecosystems is <em>limited</em> due to cumulative energy losses at each level.</div>
+  <div class="card">
+    <h3>Why Food Chains Are Short</h3>
+    <div style="display:flex;align-items:center;gap:12px;margin:12px 0;flex-wrap:wrap">
+      <div style="flex:1;min-width:200px">
+        <p style="font-size:14px">With ~10% transfer efficiency, energy diminishes rapidly:</p>
+        <div style="font-size:13px;background:var(--bg);padding:10px;border-radius:8px;margin-top:8px">
+          Level 1 (Producers): 100,000 kJ<br/>
+          Level 2: 10,000 kJ<br/>
+          Level 3: 1,000 kJ<br/>
+          Level 4: 100 kJ<br/>
+          Level 5: 10 kJ ← barely enough<br/>
+          <strong>Level 6: 1 kJ ← cannot sustain a population</strong>
+        </div>
+      </div>
+      <div style="flex:1;min-width:180px;text-align:center">
+        <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Maximum: 4–5 trophic levels</div>
+        <div style="font-size:40px">🔺</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">Fewer organisms at each level</div>
+      </div>
+    </div>
+  </div>
+  <div class="kt"><strong>Implication for top predators:</strong> Apex predators (eagles, sharks, lions) are always <em>rare</em> — there simply isn't enough energy at the top of the pyramid to support large populations. This also makes them <em>vulnerable</em> to ecosystem disturbance.</div>
+  <div class="tip">1,350 kg of corn fed directly to humans supports ~22 people. Fed to cattle first (as beef), the same amount supports only ~1 person. This illustrates the energetic cost of eating at higher trophic levels.</div>
+</div>
+
+<!-- ==================== SLIDE 17: 2.2.15 ==================== -->
+<div class="slide" data-sec="foodweb">
+  <div class="section-tag">2.2.15</div>
+  <h2>Food Webs: Real-World Complexity</h2>
+  <div class="kt"><strong>Key Understanding</strong>Food webs show the <em>complexity of trophic relationships</em> in communities. Organisms rarely feed on just one species — they participate in multiple food chains simultaneously.</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Food Chains vs Food Webs</h3>
+      <ul class="bullets">
+        <li><strong>Chain:</strong> Linear, simple, one path (grass → rabbit → fox)</li>
+        <li><strong>Web:</strong> Interconnected, realistic, many overlapping paths</li>
+        <li>Web shows that most organisms feed at <strong>multiple trophic levels</strong> (omnivores)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Why Food Webs Matter</h3>
+      <ul class="bullets">
+        <li><strong>Stability:</strong> More connections = more alternative pathways = more resilience</li>
+        <li><strong>Impact prediction:</strong> Removal of one species has cascading effects through the web</li>
+        <li><strong>Biodiversity indicator:</strong> Complex webs = healthy, diverse ecosystems</li>
+      </ul>
+    </div>
+  </div>
+  <div class="kt"><strong>Key concept:</strong> If a species in a food web is removed, energy can flow through alternative pathways — this is why biodiversity confers ecosystem stability. Loss of a keystone species, however, can collapse entire sections of the web.</div>
+</div>
+
+<!-- ==================== SLIDE 18: 2.2.16 ==================== -->
+<div class="slide" data-sec="foodweb">
+  <div class="section-tag">2.2.16</div>
+  <h2>Measuring Biomass</h2>
+  <div class="kt"><strong>Key Understanding</strong>Biomass of a trophic level can be measured by <em>collecting and drying samples</em>. The dry mass approximates the stored energy available at that trophic level.</div>
+  <div class="card">
+    <h3>Method: Collection &amp; Drying</h3>
+    <ol style="padding-left:20px;font-size:14px;line-height:1.8">
+      <li><strong>Collect</strong> representative samples of organisms from the ecosystem</li>
+      <li><strong>Dry</strong> samples in an oven at constant temperature until stable weight is reached</li>
+      <li><strong>Weigh</strong> the dry mass (removes all water content)</li>
+      <li><strong>Extrapolate</strong> from sample to estimate total biomass of the trophic level</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>Measuring Energy Content: Calorimetry</h3>
+    <ol style="padding-left:20px;font-size:14px;line-height:1.8">
+      <li>Burn dried sample in a <strong>calorimeter</strong></li>
+      <li>Heat released warms a known mass of water</li>
+      <li>Measure temperature change → calculate energy content</li>
+      <li>Extrapolate to estimate total energy in the trophic level's biomass</li>
+    </ol>
+  </div>
+  <div class="tip">For exams: know that we use <em>dry mass</em> (not wet mass) because water content varies enormously between organisms and doesn't represent stored energy.</div>
+</div>
+
+<!-- ==================== SLIDE 19: 2.2.17 ==================== -->
+<div class="slide" data-sec="foodweb">
+  <div class="section-tag">2.2.17</div>
+  <h2>Ecological Pyramids</h2>
+  <div class="kt"><strong>Key Understanding</strong>Ecological pyramids are graphical representations of <em>relative numbers, biomass, or energy</em> at each trophic level in an ecosystem.</div>
+  <div class="card-grid cols-3">
+    <div class="card" style="text-align:center">
+      <h3>Pyramid of Numbers</h3>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Individual organisms per level</div>
+      <div class="pyramid">
+        <div class="pyramid-level" style="width:35%;background:var(--orange)">Top predator</div>
+        <div class="pyramid-level" style="width:55%;background:#3b82f6">Secondary C.</div>
+        <div class="pyramid-level" style="width:75%;background:#10b981">Primary C.</div>
+        <div class="pyramid-level" style="width:100%;background:#6366f1">Producers</div>
+      </div>
+      <p style="font-size:12px;color:var(--muted)">Can be inverted (e.g., one tree → many insects)</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <h3>Pyramid of Biomass</h3>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Total dry mass per level</div>
+      <div class="pyramid">
+        <div class="pyramid-level" style="width:30%;background:var(--orange)">Tertiary</div>
+        <div class="pyramid-level" style="width:50%;background:#3b82f6">Secondary</div>
+        <div class="pyramid-level" style="width:75%;background:#10b981">Primary</div>
+        <div class="pyramid-level" style="width:100%;background:#6366f1">Producers</div>
+      </div>
+      <p style="font-size:12px;color:var(--muted)">Usually upright; can be temporarily inverted in aquatic systems</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <h3>Pyramid of Energy</h3>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Energy flow per unit time</div>
+      <div class="pyramid">
+        <div class="pyramid-level" style="width:25%;background:var(--orange)">Tertiary</div>
+        <div class="pyramid-level" style="width:45%;background:#3b82f6">Secondary</div>
+        <div class="pyramid-level" style="width:72%;background:#10b981">Primary</div>
+        <div class="pyramid-level" style="width:100%;background:#6366f1">Producers</div>
+      </div>
+      <p style="font-size:12px;color:var(--muted)"><strong>Always</strong> upright — the most reliable pyramid type</p>
+    </div>
+  </div>
+  <div class="tip">The energy pyramid is ALWAYS upright because of the second law of thermodynamics. The numbers and biomass pyramids can occasionally be inverted (e.g., one large tree supporting many insects).</div>
+</div>
+
+<!-- ==================== SLIDE 20: 2.2.18 ==================== -->
+<div class="slide" data-sec="human">
+  <div class="section-tag">2.2.18</div>
+  <h2>Bioaccumulation &amp; Biomagnification</h2>
+  <div class="kt"><strong>Key Understanding</strong>Non-biodegradable pollutants (PCB, DDT, mercury) cause changes to ecosystems through <em>bioaccumulation</em> (buildup in individuals) and <em>biomagnification</em> (increasing concentration up the food chain).</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Bioaccumulation</h3>
+      <p style="font-size:14px">Pollutant concentration <strong>increases within an individual organism</strong> over time because the organism absorbs it faster than it can excrete or metabolize it.</p>
+      <div style="background:var(--bg);padding:10px;border-radius:8px;font-size:13px;margin-top:8px">
+        Example: A fish swimming in water with low DDT concentrations absorbs DDT throughout its life → tissue concentration builds up.
+      </div>
+    </div>
+    <div class="card">
+      <h3>Biomagnification</h3>
+      <p style="font-size:14px">Pollutant concentration <strong>increases at each trophic level</strong> because predators consume many contaminated prey, concentrating the pollutant.</p>
+      <div style="background:var(--bg);padding:10px;border-radius:8px;font-size:13px;margin-top:8px">
+        Example: A bird eating 100 contaminated fish accumulates the DDT from all 100 fish.
+      </div>
+    </div>
+  </div>
+  <div class="card" style="background:var(--bg)">
+    <h3>Classic Example: DDT</h3>
+    <p style="font-size:13px">Water (0.000003 ppm) → Plankton (0.04 ppm) → Small fish (0.5 ppm) → Large fish (2 ppm) → <strong>Eagle (25 ppm)</strong></p>
+    <p style="font-size:13px;margin-top:6px">DDT caused eggshell thinning in raptors (eagles, pelicans), leading to reproductive failure. This was famously documented by Rachel Carson in <em>Silent Spring</em> (1962).</p>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 21: 2.2.19 ==================== -->
+<div class="slide" data-sec="human">
+  <div class="section-tag">2.2.19</div>
+  <h2>Microplastics &amp; Pollutant Transmission</h2>
+  <div class="kt"><strong>Key Understanding</strong>Non-biodegradable pollutants are <em>absorbed within microplastics</em>, which increases their transmission in the food chain.</div>
+  <div class="card">
+    <h3>How Microplastics Amplify Pollutant Transfer</h3>
+    <ul class="bullets">
+      <li><strong>Microplastics</strong> (plastic particles &lt;5mm) absorb and concentrate hydrophobic pollutants like PCBs, DDT, and heavy metals from surrounding water</li>
+      <li>Organisms mistake microplastics for food (zooplankton, filter feeders, fish)</li>
+      <li>Pollutants desorb from the plastic inside the organism's gut → absorbed into tissues</li>
+      <li>Microplastics act as <strong>"Trojan horses"</strong> — carrying concentrated pollutants into the food chain</li>
+      <li>Because microplastics are virtually indestructible, they persist and transmit pollutants through multiple trophic levels</li>
+    </ul>
+  </div>
+  <div class="kt"><strong>Key consequence:</strong> Even areas with low ambient pollution can have organisms contaminated by pollutants delivered via microplastics. This is a global, not local, problem — microplastics have been found in the deepest ocean trenches and in Arctic ice.</div>
+</div>
+
+<!-- ==================== SLIDE 22: 2.2.20 ==================== -->
+<div class="slide" data-sec="human">
+  <div class="section-tag">2.2.20</div>
+  <h2>Human Activities &amp; Energy/Matter Flows</h2>
+  <div class="kt"><strong>Key Understanding</strong>Human activities — such as burning fossil fuels, deforestation, urbanization, and agriculture — have impacts on <em>flows of energy and transfers of matter</em> in ecosystems.</div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Activity</th><th>Impact on Energy Flow</th><th>Impact on Matter Transfer</th></tr>
+      <tr><td><strong>Burning fossil fuels</strong></td><td>Releases stored solar energy (from ancient producers) as heat</td><td>Releases ancient carbon → increased atmospheric CO₂</td></tr>
+      <tr><td><strong>Deforestation</strong></td><td>Reduces photosynthetic capacity → less energy captured</td><td>Reduces carbon fixation; releases stored carbon when burned/decays</td></tr>
+      <tr><td><strong>Urbanization</strong></td><td>Creates impervious surfaces → alters local energy budgets</td><td>Seals soil → disrupts nutrient cycling and decomposition</td></tr>
+      <tr><td><strong>Agriculture</strong></td><td>Simplifies food chains → reduces energy flow pathways</td><td>Fertilizer inputs disrupt N and P cycles; monocultures reduce matter cycling</td></tr>
+    </table>
+  </div>
+  <div class="tip">When answering exam questions on human impacts, always specify which flow (energy or matter) is affected and how the natural cycle is disrupted.</div>
+</div>
+
+<!-- ==================== SLIDE 23: 2.2.21 ==================== -->
+<div class="slide" data-sec="energy">
+  <div class="section-tag">2.2.21 <span class="hl-badge">KEY TERM</span></div>
+  <h2>Autotrophs vs Heterotrophs</h2>
+  <div class="kt"><strong>Key Understanding</strong>Autotrophs synthesize carbon compounds from <em>inorganic sources</em> (CO₂). Heterotrophs obtain carbon compounds from <em>other organisms</em>.</div>
+  <div class="card-grid cols-2">
+    <div class="card" style="border-left:4px solid #10b981">
+      <h3 style="color:#10b981">Autotrophs ("self-feeders")</h3>
+      <ul class="bullets">
+        <li>Produce own organic compounds from CO₂ + H₂O</li>
+        <li>Use light energy (photoautotrophs) or chemical energy (chemoautotrophs)</li>
+        <li><strong>Examples:</strong> Plants, algae, cyanobacteria</li>
+        <li>Form the <strong>base of all food chains</strong></li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:4px solid var(--orange)">
+      <h3 style="color:var(--orange)">Heterotrophs ("other-feeders")</h3>
+      <ul class="bullets">
+        <li>Cannot fix carbon from CO₂ — must consume other organisms</li>
+        <li>Include all consumers and decomposers</li>
+        <li><strong>Examples:</strong> Animals, fungi, most bacteria</li>
+        <li>Obtain carbon compounds by eating, absorbing, or parasitizing</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- ==================== SLIDE 24: 2.2.22 ==================== -->
+<div class="slide" data-sec="energy">
+  <div class="section-tag">2.2.22 <span class="hl-badge">KEY TERM</span></div>
+  <h2>Photoautotrophs vs Chemoautotrophs</h2>
+  <div class="kt"><strong>Key Understanding</strong>Photoautotrophs use <em>light</em> as an external energy source. Chemoautotrophs use <em>exothermic chemical reactions</em> as an energy source in ecosystems with little or no light.</div>
+  <div class="card-grid cols-2">
+    <div class="card" style="border-left:4px solid #3b82f6">
+      <h3 style="color:#3b82f6">Photoautotrophs</h3>
+      <ul class="bullets">
+        <li>Drive carbon fixation using solar energy (photosynthesis)</li>
+        <li>Contain pigments like chlorophyll to capture light</li>
+        <li><strong>Examples:</strong> Terrestrial plants, green algae, kelp</li>
+        <li>Dominant producers in sunlit environments</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:4px solid #8b5cf6">
+      <h3 style="color:#8b5cf6">Chemoautotrophs</h3>
+      <ul class="bullets">
+        <li>Fix carbon using energy from oxidation of inorganic molecules</li>
+        <li>Synthesize organic matter without any solar radiation</li>
+        <li><strong>Examples:</strong> Deep-sea vent bacteria, nitrifying bacteria</li>
+        <li>Foundation of deep ocean floor and cave ecosystems</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 25: HL 2.2.23 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.2.23</div>
+  <h2>Primary Productivity<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>Primary productivity is the <em>rate of production of biomass</em> using an external energy source and inorganic sources of carbon and other elements.</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Gross Primary Productivity (GPP)</h3>
+      <p style="font-size:14px">The <strong>total rate</strong> of biomass production by producers through photosynthesis. This includes all glucose made — before any is used for respiration.</p>
+      <div class="formula">GPP = Total photosynthesis per unit time</div>
+    </div>
+    <div class="card">
+      <h3>Net Primary Productivity (NPP)</h3>
+      <p style="font-size:14px">The rate of biomass production <strong>remaining after producers' own respiration</strong>. This is what's available to consumers.</p>
+      <div class="formula">NPP = GPP − R<sub>autotroph</sub></div>
+    </div>
+  </div>
+  <div class="kt hl-accent"><strong>NPP is the key metric</strong> — it represents the energy available to all heterotrophs in the ecosystem. Higher NPP = more food available = more consumers supported.</div>
+</div>
+
+<!-- ==================== SLIDE 26: HL 2.2.24 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.2.24</div>
+  <h2>Secondary Productivity<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>Secondary productivity is the <em>gain in biomass by consumers</em> using carbon compounds absorbed and assimilated from ingested food.</div>
+  <div class="card">
+    <h3>Assimilation Efficiency</h3>
+    <p style="font-size:14px">Not all food eaten is assimilated. Secondary productivity depends on:</p>
+    <ul class="bullets hl">
+      <li><strong>Ingestion:</strong> Total food consumed</li>
+      <li><strong>Assimilation:</strong> What is absorbed (minus faeces)</li>
+      <li><strong>Respiration:</strong> Energy used for metabolism (minus heat loss)</li>
+      <li><strong>NP (consumer) = Assimilated food − Respiration</strong></li>
+    </ul>
+  </div>
+  <div class="card" style="background:var(--bg)">
+    <h3>Example</h3>
+    <p style="font-size:14px">A bird eats 100g of seeds. It assimilates 80g (20g lost as faeces). It uses 60g for respiration. <strong>Secondary NP = 80 − 60 = 20g</strong> of new biomass (available for growth, reproduction, and predators).</p>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 27: HL 2.2.25 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.2.25</div>
+  <h2>NPP: The Basis for Food Chains<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>Net primary productivity is the basis for food chains because it is the quantity of carbon compounds <em>sustainably available</em> to primary consumers.</div>
+  <div class="card">
+    <h3>Why NPP and Not GPP?</h3>
+    <ul class="bullets hl">
+      <li>GPP includes glucose that the plant <strong>uses for its own respiration</strong> — that energy is not available to herbivores</li>
+      <li>NPP = what's <strong>left over</strong> after the plant's metabolic needs → this is the biomass available for consumption</li>
+      <li>If herbivores consumed more than NPP, they would be <strong>depleting the producer's biomass</strong>, reducing future productivity</li>
+    </ul>
+  </div>
+  <div class="kt hl-accent"><strong>Sustainable consumption</strong> means that consumers can only harvest biomass up to the NPP level without degrading the producer population. Exceeding NPP leads to ecosystem degradation.</div>
+  <div class="tip">This connects to the concept of Maximum Sustainable Yield (next slide) — it's the same principle applied to fisheries and forestry management.</div>
+</div>
+
+<!-- ==================== SLIDE 28: HL 2.2.26-27 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.2.26 & 2.2.27</div>
+  <h2>Maximum Sustainable Yields<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding (2.2.26)</strong>Maximum sustainable yields (MSYs) are the net primary or net secondary productivity of a system — the maximum that can be harvested without depleting the resource.</div>
+  <div class="kt hl-accent" style="margin-top:8px"><strong>Key Understanding (2.2.27)</strong>Sustainable yields are <em>higher for lower trophic levels</em>. It is more energy-efficient to harvest producers directly than to raise consumers.</div>
+  <div class="card">
+    <h3>MSY Applied to Fisheries</h3>
+    <p style="font-size:14px">MSY = the highest catch that can be taken indefinitely without causing population decline. Exceeding MSY leads to <strong>fishery collapse</strong>.</p>
+  </div>
+  <div class="card-grid cols-2">
+    <div class="card" style="text-align:center">
+      <div style="font-size:24px;margin-bottom:6px">🐟🐟🐟🐟🐟</div>
+      <h3>Eating fish (Level 3)</h3>
+      <p style="font-size:13px">Low NPP available<br/>Small sustainable yield</p>
+    </div>
+    <div class="card" style="text-align:center;border-color:#10b981">
+      <div style="font-size:24px;margin-bottom:6px">🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾</div>
+      <h3>Eating plants (Level 1)</h3>
+      <p style="font-size:13px">High NPP available<br/>Large sustainable yield</p>
+    </div>
+  </div>
+  <div class="tip">This is why plant-based diets are more energy-efficient — less energy is lost between trophic levels, so more people can be fed from the same land area.</div>
+</div>
+
+<!-- ==================== SLIDE 29: HL 2.2.28 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.2.28</div>
+  <h2>Ecological Efficiency<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>Ecological efficiency is the <em>percentage of energy received by one trophic level</em> that is passed on to the next level.</div>
+  <div class="eq">
+    <span class="label">Formula</span>
+    Ecological Efficiency = (Energy at Level n+1 ÷ Energy at Level n) × 100%
+  </div>
+  <div class="card">
+    <h3>Worked Example</h3>
+    <p style="font-size:14px">Producers receive 20,000 kJ of solar energy and convert it to 2,500 kJ of biomass.<br/>
+    Primary consumers receive 2,500 kJ of this as food.<br/></p>
+    <div class="formula">Ecological Efficiency = (2,500 ÷ 20,000) × 100% = <strong>12.5%</strong></div>
+    <p style="font-size:13px;margin-top:8px;color:var(--muted)">Typical range: <strong>1–20%</strong> depending on ecosystem and species. The "10% rule" is an average approximation.</p>
+  </div>
+  <div class="tip">Exam questions may ask you to calculate ecological efficiency from given data. Always check which units are being compared (kJ of sunlight vs kJ of biomass).</div>
+</div>
+
+<!-- ==================== SLIDE 30: HL 2.2.29 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.2.29</div>
+  <h2>Entropy &amp; Biomass Flow<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>The second law of thermodynamics shows how the <em>entropy (disorder)</em> of a system <em>increases</em> as biomass passes through ecosystems.</div>
+  <div class="card">
+    <h3>Entropy in Ecosystems</h3>
+    <ul class="bullets hl">
+      <li><strong>Entropy</strong> is a measure of disorder or randomness in a system</li>
+      <li>When sunlight (ordered electromagnetic radiation) is converted to chemical energy (glucose) and then to heat (disordered molecular motion), entropy <strong>increases</strong></li>
+      <li>Each trophic transfer further increases entropy — energy becomes less concentrated, less organized, less useful</li>
+      <li>The total entropy of the universe <strong>always increases</strong> — this is the essence of the second law</li>
+    </ul>
+  </div>
+  <div class="kt hl-accent"><strong>Connection to ecosystem structure:</strong> This is why ecosystems have a pyramid shape — at each level, energy becomes more dispersed (higher entropy), so less energy is available to support biomass at the next level.</div>
+  <div class="card" style="background:var(--bg)">
+    <h3>The Big Picture</h3>
+    <p style="font-size:14px">Ecosystems are <strong>dissipative structures</strong> — they maintain internal order (low entropy) by continuously importing low-entropy energy (sunlight) and exporting high-entropy energy (heat). When the energy input stops, the system collapses.</p>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 31: KEY TERMS ==================== -->
+<div class="slide" data-sec="summary">
+  <div class="section-tag">Key Terms Glossary</div>
+  <h2>Essential Vocabulary</h2>
+  <div class="card">
+    <table class="tbl">
+      <tr><th style="width:35%">Term</th><th>Definition</th></tr>
+      <tr><td><strong>Autotroph</strong></td><td>Organism that synthesizes its own carbon compounds from inorganic sources (CO₂)</td></tr>
+      <tr><td><strong>Heterotroph</strong></td><td>Organism that obtains carbon compounds from other organisms</td></tr>
+      <tr><td><strong>Biomass</strong></td><td>Stored organic matter (dry mass) in living or recently living organisms</td></tr>
+      <tr><td><strong>Trophic level</strong></td><td>A feeding position/stage in a food chain</td></tr>
+      <tr><td><strong>Food chain</strong></td><td>Linear sequence of organisms through which energy and matter transfer</td></tr>
+      <tr><td><strong>Food web</strong></td><td>Network of interconnected food chains in a community</td></tr>
+      <tr><td><strong>Gross productivity (GP)</strong></td><td>Total biomass produced per unit time (before respiration losses)</td></tr>
+      <tr><td><strong>Net productivity (NP)</strong></td><td>Biomass remaining after respiration: NP = GP − R</td></tr>
+      <tr><td><strong>Ecological efficiency</strong></td><td>% of energy at one trophic level passed to the next</td></tr>
+      <tr><td><strong>Bioaccumulation</strong></td><td>Buildup of pollutant in an individual organism over time</td></tr>
+      <tr><td><strong>Biomagnification</strong></td><td>Increasing pollutant concentration at successive trophic levels</td></tr>
+      <tr><td><strong>Microplastics</strong></td><td>Plastic particles &lt;5mm that absorb and transport pollutants</td></tr>
+      <tr><td><strong>Maximum sustainable yield</strong></td><td>Maximum harvestable biomass without depleting the resource</td></tr>
+      <tr><td><strong>Entropy</strong></td><td>Measure of disorder; increases with each energy transfer</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 32: EXAM TIPS ==================== -->
+<div class="slide" data-sec="summary">
+  <div class="section-tag">Exam Preparation</div>
+  <h2>Key Takeaways &amp; Exam Tips</h2>
+  <div class="card">
+    <h3>Must-Know Calculations</h3>
+    <div class="card-grid cols-2">
+      <div class="card">
+        <p style="font-size:14px"><strong>NP = GP − R</strong></p>
+        <p style="font-size:13px;color:var(--muted)">Calculate net productivity from gross and respiration values</p>
+      </div>
+      <div class="card">
+        <p style="font-size:14px"><strong>Efficiency = (next level ÷ current level) × 100%</strong></p>
+        <p style="font-size:13px;color:var(--muted)">Calculate ecological efficiency between trophic levels</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Common Exam Patterns</h3>
+    <ul class="bullets">
+      <li><strong>Construct food chains/webs</strong> from data → label trophic levels, identify producers/consumers</li>
+      <li><strong>Calculate energy transfer</strong> between levels → apply the ~10% rule with real data</li>
+      <li><strong>Bioaccumulation chains</strong> → show increasing concentration at each level</li>
+      <li><strong>Explain energy losses</strong> → use second law of thermodynamics, heat loss, respiration</li>
+      <li><strong>Compare GP vs NP</strong> → know the formula and what each represents</li>
+      <li><strong>Human impact analysis</strong> → identify which flows (energy/matter) are disrupted and how</li>
+    </ul>
+  </div>
+  <div class="tip" style="margin-top:12px"><strong>For 9-mark structured essays:</strong> Always use specific examples, link to the laws of thermodynamics, and consider both the energy and matter aspects of any ecosystem process. Show understanding, not just knowledge.</div>
+  <div class="card" style="text-align:center;margin-top:16px;background:#f5f7fa;border:1.5px solid var(--blue)">
+    <p style="font-size:16px;font-weight:600">You've covered all 29 syllabus points ✅</p>
+    <p style="font-size:13px;color:var(--muted)">2.2.1 – 2.2.21 (SL) + 2.2.23 – 2.2.29 (HL)</p>
+  </div>
+</div>
+
+</div><!-- /deck -->
+
+<!-- Navigation -->
+<button id="prevBtn" disabled aria-label="Previous slide">‹</button>
+<button id="nextBtn" aria-label="Next slide">›</button>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+let current = 0;
+
+// Click event listeners
+document.getElementById('prevBtn').addEventListener('click', () => go(-1));
+document.getElementById('nextBtn').addEventListener('click', () => go(1));
+
+function goTo(idx) {
+  if (idx < 0 || idx >= total) return;
+  slides[current].classList.remove('active');
+  current = idx;
+  slides[current].classList.add('active');
+  // Update buttons
+  document.getElementById('prevBtn').disabled = current === 0;
+  document.getElementById('nextBtn').disabled = current === total - 1;
+  // Progress
+  document.getElementById('progress').style.width = ((current + 1) / total * 100) + '%';
+  // Scroll to top
+  document.getElementById('deck').scrollTop = 0;
+}
+
+function go(dir) { goTo(current + dir); }
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); go(1); }
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); go(-1); }
+});
+
+// Init
+goTo(0);
+</script>
+</body>
+</html>

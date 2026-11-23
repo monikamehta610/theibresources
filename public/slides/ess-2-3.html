@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ESS Topic 2.3</title>
+
+  <!-- Shared Reson/Bloome design system (base tokens + BW layer) -->
+  <link rel="stylesheet" href="/slides/reson-shared.css" />
+
+  <!-- Sora font (used by Bloome slides) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Slide-specific styles -->
+  <style>
+    /* Slide layout and styling loaded from shared stylesheet /slides/reson-shared.css */
+    .slide-img {
+      width: 100%;
+      max-width: 680px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin: 16px auto;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+  </style>
+
+  <!-- Reson widget bridge (must load before body) -->
+  <script src="/slides/reson-init.js"></script>
+</head>
+<body class="bw">
+<div id="progress" style="width:0%"></div>
+
+<div id="deck">
+
+<!-- ==================== SLIDE 1: TITLE ==================== -->
+<div class="slide active" data-sec="intro">
+  <div style="text-align:center;padding:40px 0 20px">
+    <div class="section-tag">IB DP Environmental Systems &amp; Societies — Topic 2: Ecology</div>
+    <h1>Biogeochemical<br/>Cycles</h1>
+    <p class="subtitle">Subtopic 2.3 — New Syllabus (First Assessment 2026)<br/>Standard Level + Higher Level</p>
+    <div style="margin-top:30px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+      <div class="card" style="flex:1;min-width:160px;text-align:center;border-left:3px solid var(--blue)">
+        <div style="font-size:13px;font-weight:600">20 SL Points</div>
+        <div style="font-size:12px;color:var(--muted)">2.3.1 – 2.3.21</div>
+      </div>
+      <div class="card" style="flex:1;min-width:160px;text-align:center;border-left:3px solid var(--orange)">
+        <div style="font-size:13px;font-weight:600">5 HL Extensions</div>
+        <div style="font-size:12px;color:var(--muted)">2.3.12 – 2.3.16</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 2: OVERVIEW ==================== -->
+<div class="slide" data-sec="intro">
+  <div class="section-tag">Overview</div>
+  <h2>What This Subtopic Covers</h2>
+  <p class="lead">Biogeochemical cycles describe how chemical elements (carbon, nitrogen, phosphorus, water) move through biotic and abiotic components of ecosystems. Understanding these cycles is essential for analyzing human impacts on the environment.</p>
+  <div class="card-grid cols-2">
+    <div class="card"><strong style="color:var(--blue)">A. The Carbon Cycle</strong><br/><span style="font-size:13px;color:var(--muted)">Stores, flows, fossil fuels, ocean acidification, sequestration</span></div>
+    <div class="card"><strong style="color:var(--blue)">B. The Nitrogen Cycle</strong><br/><span style="font-size:13px;color:var(--muted)">Bacteria, fixation, nitrification, denitrification, human impacts</span></div>
+  </div>
+  <h3 style="margin-top:20px">Guiding Questions</h3>
+  <ul class="bullets">
+    <li>How do chemical elements cycle through ecosystems?</li>
+    <li>How do human activities alter these natural cycles?</li>
+    <li>What are the consequences of disrupting biogeochemical cycles?</li>
+  </ul>
+</div>
+
+<!-- ==================== SLIDE 3: 2.3.1 ==================== -->
+<div class="slide" data-sec="intro">
+  <div class="section-tag">2.3.1</div>
+  <h2>What Are Biogeochemical Cycles?</h2>
+  <div class="kt"><strong>Key Understanding</strong>Biogeochemical cycles ensure chemical elements continue to be <em>available to living organisms</em>.</div>
+  <div class="card">
+    <h3>Why Do Elements Need to Cycle?</h3>
+    <ul class="bullets">
+      <li>The Earth is a <strong>closed system for matter</strong> — very little new matter enters or leaves</li>
+      <li>Life requires a finite supply of elements (C, N, P, S, H₂O, etc.)</li>
+      <li>Without cycling, these elements would become locked up and unavailable</li>
+      <li>Cycles ensure elements move between <strong>living (biotic)</strong> and <strong>non-living (abiotic)</strong> components</li>
+    </ul>
+  </div>
+  <div class="kt"><strong>The name tells you everything:</strong> <em>Bio</em> (living) + <em>Geo</em> (Earth/rocks) + <em>Chemical</em> (elements) — the cycling of chemical elements through living organisms and the Earth's systems.</div>
+</div>
+
+<!-- ==================== SLIDE 4: 2.3.2 ==================== -->
+<div class="slide" data-sec="intro">
+  <div class="section-tag">2.3.2</div>
+  <h2>Stores, Sinks, and Sources</h2>
+  <div class="kt"><strong>Key Understanding</strong>Biogeochemical cycles have <em>stores, sinks, and sources</em>.</div>
+  <div class="card-grid cols-3">
+    <div class="card" style="text-align:center;border-top:3px solid #3b82f6">
+      <h3 style="font-size:14px;color:#3b82f6">Storage</h3>
+      <p style="font-size:13px">A place where an element is <strong>held</strong> for a period of time</p>
+      <p style="font-size:12px;color:var(--muted)">e.g., Carbon in atmosphere, ocean, fossil fuels, biomass</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:3px solid #10b981">
+      <h3 style="font-size:14px;color:#10b981">Sink</h3>
+      <p style="font-size:13px">A store that is <strong>absorbing</strong> more than it releases (net uptake)</p>
+      <p style="font-size:12px;color:var(--muted)">e.g., Oceans absorb more CO₂ than they release</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:3px solid var(--orange)">
+      <h3 style="font-size:14px;color:var(--orange)">Source</h3>
+      <p style="font-size:13px">A store that is <strong>releasing</strong> more than it absorbs (net output)</p>
+      <p style="font-size:12px;color:var(--muted)">e.g., Burning fossil fuels releases more CO₂ than is stored</p>
+    </div>
+  </div>
+  <div class="tip">A store can be a sink at one time and a source at another — it depends on the balance of inputs and outputs. For example, a forest is a carbon sink while growing, but becomes a carbon source when burned.</div>
+</div>
+
+<!-- ==================== SLIDE 5: 2.3.3 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.3</div>
+  <h2>Carbon Stores</h2>
+  <div class="kt"><strong>Key Understanding</strong>Organisms, crude oil and natural gas contain <em>organic</em> stores of carbon. Inorganic stores can be found in the <em>atmosphere, soils and oceans</em>.</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Organic Carbon Stores</h3>
+      <ul class="bullets">
+        <li><strong>Biosphere:</strong> living organisms (biomass)</li>
+        <li><strong>Fossil fuels:</strong> crude oil, natural gas, coal</li>
+        <li><strong>Dead organic matter:</strong> leaf litter, detritus</li>
+        <li>Carbon is bonded to hydrogen in complex molecules</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Inorganic Carbon Stores</h3>
+      <ul class="bullets">
+        <li><strong>Atmosphere:</strong> CO₂ (~420 ppm and rising)</li>
+        <li><strong>Oceans:</strong> dissolved CO₂, bicarbonates, carbonates</li>
+        <li><strong>Soils:</strong> carbonate minerals, limestone</li>
+        <li><strong>Rocks:</strong> calcium carbonate (CaCO₃)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 6: 2.3.4 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.4</div>
+  <h2>Carbon Flows in Ecosystems</h2>
+  <div class="kt"><strong>Key Understanding</strong>Carbon flows between stores in ecosystems by <em>photosynthesis, feeding, defecation, cellular respiration, death and decomposition</em>.</div>
+  <img src="/slides/images/ess-2-3-carbon-cycle.jpg" alt="The Global Carbon Cycle Diagram" class="slide-img" />
+  <div class="flow">
+    <div class="flow-node" style="background:#e8f0fa;border-color:#3b82f6">Atmosphere<br/><span style="font-size:11px">CO₂</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node" style="background:#e8f8ee;border-color:#2e9e5a">Producers<br/><span style="font-size:11px">Photosynthesis</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node" style="background:#fff9e6;border-color:#d97706">Consumers<br/><span style="font-size:11px">Feeding</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node" style="background:#f3eefa;border-color:#8b5cf6">Decomposers<br/><span style="font-size:11px">Death + Decay</span></div>
+  </div>
+  <div class="card">
+    <h3>Key Flows</h3>
+    <table class="tbl">
+      <tr><th>Process</th><th>Carbon Movement</th></tr>
+      <tr><td><strong>Photosynthesis</strong></td><td>Atmosphere CO₂ → plant biomass (organic C)</td></tr>
+      <tr><td><strong>Feeding</strong></td><td>Producer C → consumer C (organic C transferred)</td></tr>
+      <tr><td><strong>Defecation</strong></td><td>Undigested C → soil (organic matter)</td></tr>
+      <tr><td><strong>Cellular respiration</strong></td><td>Organic C → atmosphere CO₂</td></tr>
+      <tr><td><strong>Death & decomposition</strong></td><td>Dead organic C → soil → atmosphere (via decomposers)</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 7: 2.3.5 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.5</div>
+  <h2>Carbon Sequestration</h2>
+  <div class="kt"><strong>Key Understanding</strong>Carbon sequestration is the process of <em>capturing gaseous and atmospheric carbon dioxide</em> and storing it in a <em>solid or liquid form</em>.</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Natural Sequestration</h3>
+      <ul class="bullets">
+        <li><strong>Photosynthesis:</strong> plants capture CO₂ → biomass</li>
+        <li><strong>Ocean absorption:</strong> CO₂ dissolves into seawater</li>
+        <li><strong>Soil organic matter:</strong> decomposition stores C in soil</li>
+        <li><strong>Rock weathering:</strong> CO₂ reacts with minerals</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Artificial Sequestration</h3>
+      <ul class="bullets">
+        <li><strong>CCS:</strong> Carbon capture and storage from industrial sources</li>
+        <li><strong>Direct air capture:</strong> Machines that pull CO₂ from air</li>
+        <li><strong>BECCS:</strong> Bioenergy with carbon capture and storage</li>
+        <li><strong>Afforestation:</strong> Planting trees on non-forest land</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 8: 2.3.6 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.6</div>
+  <h2>Ecosystems as Carbon Stores, Sinks, or Sources</h2>
+  <div class="kt"><strong>Key Understanding</strong>Ecosystems can act as <em>stores, sinks or sources</em> of carbon.</div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Ecosystem</th><th>Carbon Role</th><th>Why?</th></tr>
+      <tr><td><strong>Healthy forest</strong></td><td>Sink</td><td>Growth absorbs more CO₂ than respiration releases</td></tr>
+      <tr><td><strong>Burning forest</strong></td><td>Source</td><td>Fire releases stored carbon rapidly</td></tr>
+      <tr><td><strong>Open ocean</strong></td><td>Sink</td><td>Phytoplankton + dissolution absorb CO₂</td></tr>
+      <tr><td><strong>Wetland</strong></td><td>Store</td><td>Waterlogged conditions slow decomposition → peat</td></tr>
+      <tr><td><strong>Agricultural land</strong></td><td>Source (often)</td><td>Tilling releases soil carbon; monocultures reduce storage</td></tr>
+    </table>
+  </div>
+  <div class="tip">Whether an ecosystem is a sink or source depends on the balance of photosynthesis/respiration and decomposition. Human activities can flip a sink into a source (e.g., deforestation).</div>
+</div>
+
+<!-- ==================== SLIDE 9: 2.3.7 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.7</div>
+  <h2>Fossil Fuels: Ancient Carbon Stores</h2>
+  <div class="kt"><strong>Key Understanding</strong>Fossil fuels are stores of carbon with <em>unlimited residence times</em>. They were formed when ecosystems acted as carbon sinks in past eras and become carbon sources when burned.</div>
+  <div class="card">
+    <h3>Formation and Timescales</h3>
+    <ul class="bullets">
+      <li><strong>Coal:</strong> formed from partially decomposed terrestrial plants (millions of years)</li>
+      <li><strong>Oil:</strong> formed from marine organisms (plankton, algae) in ocean sediments</li>
+      <li><strong>Natural gas:</strong> formed alongside oil from organic matter under heat and pressure</li>
+      <li><strong>Residence time:</strong> effectively infinite until extracted and burned</li>
+    </ul>
+  </div>
+  <div class="kt"><strong>Key concept:</strong> Fossil fuels stored carbon that was removed from the active carbon cycle millions of years ago. Burning them releases ancient carbon into the modern atmosphere in seconds — disrupting the natural balance.</div>
+</div>
+
+<!-- ==================== SLIDE 10: 2.3.8 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.8</div>
+  <h2>Agriculture and the Carbon Cycle</h2>
+  <div class="kt"><strong>Key Understanding</strong>Agricultural systems can act as carbon <em>stores, sources and sinks</em>, depending on the techniques used.</div>
+  <div class="card-grid cols-2">
+    <div class="card" style="border-left:4px solid #10b981">
+      <h3 style="color:#10b981">Carbon Sinks (Good Practices)</h3>
+      <ul class="bullets">
+        <li><strong>Agroforestry:</strong> trees + crops → more biomass storage</li>
+        <li><strong>No-till farming:</strong> soil carbon preserved</li>
+        <li><strong>Cover crops:</strong> continuous photosynthesis</li>
+        <li><strong>Composting:</strong> organic matter added to soil</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:4px solid var(--orange)">
+      <h3 style="color:var(--orange)">Carbon Sources (Bad Practices)</h3>
+      <ul class="bullets">
+        <li><strong>Tilling:</strong> exposes soil carbon to oxidation → CO₂ release</li>
+        <li><strong>Deforestation for farmland:</strong> releases tree biomass carbon</li>
+        <li><strong>Rice paddies:</strong> anaerobic conditions → methane emissions</li>
+        <li><strong>Livestock:</strong> enteric fermentation → methane</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 11: 2.3.9 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.9</div>
+  <h2>Oceans and Carbon</h2>
+  <div class="kt"><strong>Key Understanding</strong>Carbon dioxide is <em>absorbed into the oceans</em> by dissolving and is <em>released as a gas</em> when it comes out of solution.</div>
+  <div class="card">
+    <h3>Ocean Carbon Exchange</h3>
+    <div class="eq" style="font-size:15px">
+      <span class="label">Dissolution equilibrium</span>
+      CO₂ (atmosphere) <span class="arrow">↔</span> CO₂ (dissolved in seawater) <span class="arrow">↔</span> H₂CO₃ <span class="arrow">↔</span> HCO₃⁻ <span class="arrow">↔</span> CO₃²⁻
+    </div>
+  </div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>How Oceans Absorb CO₂</h3>
+      <ul class="bullets">
+        <li>CO₂ dissolves at the ocean surface</li>
+        <li>Cold water absorbs more than warm water</li>
+        <li>Phytoplankton take up dissolved CO₂ via photosynthesis</li>
+        <li>~30% of human CO₂ emissions absorbed by oceans</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Temperature Effect</h3>
+      <p style="font-size:14px">As ocean temperatures <strong>rise</strong>, water holds <strong>less</strong> dissolved CO₂ → reduced absorption capacity → more CO₂ remains in atmosphere → warming accelerates (positive feedback).</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 12: 2.3.10 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.10</div>
+  <h2>Ocean Acidification</h2>
+  <div class="kt"><strong>Key Understanding</strong>Increases in concentrations of dissolved carbon dioxide cause <em>ocean acidification</em>, harming marine animals.</div>
+  <div class="card">
+    <h3>The Chemistry</h3>
+    <div class="eq" style="font-size:15px">
+      <span class="label">When CO₂ dissolves in seawater</span>
+      CO₂ + H₂O → H₂CO₃ (carbonic acid) → H⁺ + HCO₃⁻
+    </div>
+    <p style="font-size:14px;margin-top:8px">More H⁺ ions = lower pH = <strong>more acidic</strong>. Ocean pH has dropped from ~8.2 to ~8.1 since pre-industrial times (a 26% increase in acidity).</p>
+  </div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Who Is Affected?</h3>
+      <ul class="bullets">
+        <li><strong>Corals:</strong> can't build calcium carbonate skeletons → bleaching + death</li>
+        <li><strong>Molluscs:</strong> shells dissolve or become thinner</li>
+        <li><strong>Plankton:</strong> shell-forming species decline → food web collapse</li>
+        <li><strong>Fish:</strong> sensory disruption, behavioural changes</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Why It Matters</h3>
+      <ul class="bullets">
+        <li>Marine food webs depend on shell-forming organisms</li>
+        <li>Coral reefs support 25% of marine biodiversity</li>
+        <li>Fisheries and coastal protection at risk</li>
+        <li>Extremely difficult to reverse</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 13: 2.3.11 ==================== -->
+<div class="slide" data-sec="carbon">
+  <div class="section-tag">2.3.11</div>
+  <h2>Alleviating Human Impacts on the Carbon Cycle</h2>
+  <div class="kt"><strong>Key Understanding</strong>Measures are required to <em>alleviate the effects of human activities</em> on the carbon cycle.</div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Strategy</th><th>How It Helps</th><th>Example</th></tr>
+      <tr><td><strong>Reduce emissions</strong></td><td>Less CO₂ entering atmosphere</td><td>Renewable energy, electric vehicles</td></tr>
+      <tr><td><strong>Carbon sequestration</strong></td><td>Remove CO₂ from atmosphere</td><td>Afforestation, CCS technology</td></tr>
+      <tr><td><strong>Protect carbon sinks</strong></td><td>Preserve existing storage</td><td>Stop deforestation, protect peatlands</td></tr>
+      <tr><td><strong>Restore degraded land</strong></td><td>Re-establish carbon uptake</td><td>Reforestation, wetland restoration</td></tr>
+      <tr><td><strong>Change agriculture</strong></td><td>Reduce emissions + increase soil carbon</td><td>No-till, cover crops, agroforestry</td></tr>
+    </table>
+  </div>
+  <div class="tip">For exam essays: always link specific human activities to their effect on the carbon cycle (which store, which flow is disrupted), then propose targeted mitigation.</div>
+</div>
+
+<!-- ==================== SLIDE 14: HL 2.3.12 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.3.12</div>
+  <h2>Carbon in the Lithosphere<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>The lithosphere contains carbon stores in <em>fossil fuels</em> and in <em>rocks, such as limestone</em>.</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Fossil Fuel Stores</h3>
+      <ul class="bullets hl">
+        <li><strong>Coal:</strong> terrestrial plant matter compressed over millions of years</li>
+        <li><strong>Oil:</strong> marine organisms buried in sedimentary rock</li>
+        <li><strong>Natural gas:</strong> formed with oil from organic matter under pressure</li>
+        <li>Residence time: millions of years (until extracted)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Rock Stores</h3>
+      <ul class="bullets hl">
+        <li><strong>Limestone (CaCO₃):</strong> largest inorganic carbon store</li>
+        <li>Formed from accumulated shells and coral skeletons</li>
+        <li>Weathering slowly releases CO₂ back to atmosphere</li>
+        <li>Residence time: hundreds of millions of years</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 15: HL 2.3.13 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.3.13</div>
+  <h2>Reef-Building Organisms &amp; Limestone<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>Reef-building corals and molluscs have hard parts that contain <em>calcium carbonate</em> that can become fossilized in limestone.</div>
+  <div class="card">
+    <h3>How Limestone Forms</h3>
+    <div class="flow">
+      <div class="flow-node" style="background:#e8f0fa;border-color:#3b82f6">Coral/Mollusc<br/><span style="font-size:11px">builds CaCO₃ shell</span></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node" style="background:#f5f7fa;border-color:#888">Dies +<br/>Sinks</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node" style="background:#fff9e6;border-color:#d97706">Sediment<br/><span style="font-size:11px">accumulates</span></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node" style="background:#f3eefa;border-color:#8b5cf6">Compression<br/><span style="font-size:11px">over millions of years</span></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node" style="background:#e8f8ee;border-color:#2e9e5a"><strong>Limestone</strong><br/><span style="font-size:11px">CaCO₃ rock</span></div>
+    </div>
+  </div>
+  <div class="kt hl-accent"><strong>Connection:</strong> Limestone weathering is a natural carbon sink — it slowly absorbs atmospheric CO₂. But this process operates over millions of years, far too slow to offset current human emissions.</div>
+</div>
+
+<!-- ==================== SLIDE 16: HL 2.3.14 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.3.14</div>
+  <h2>Fossil Fuel Formation<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>In past geological eras, organic matter from partially decomposed plants became fossilized in <em>coal</em>, and partially decomposed marine organisms became fossilized in <em>oil and natural gas</em> held in porous rocks.</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Coal Formation</h3>
+      <ul class="bullets hl">
+        <li>Terrestrial plants in swamp forests die</li>
+        <li>Waterlogged conditions prevent full decomposition</li>
+        <li>Layers accumulate → peat → lignite → coal</li>
+        <li>Process: millions of years under heat and pressure</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Oil &amp; Gas Formation</h3>
+      <ul class="bullets hl">
+        <li>Marine organisms (plankton, algae) die and sink</li>
+        <li>Buried in ocean sediment → compressed</li>
+        <li>Heat transforms organic matter → oil and gas</li>
+        <li>Migrate through porous rock → trapped in reservoirs</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 17: HL 2.3.15 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.3.15</div>
+  <h2>Methane Production<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>Methane is produced from dead organic matter in <em>anaerobic conditions</em> by <em>methanogenic bacteria</em>.</div>
+  <div class="card">
+    <h3>Where Is Methane Produced?</h3>
+    <table class="tbl">
+      <tr><th>Source</th><th>Conditions</th><th>Scale</th></tr>
+      <tr><td><strong>Wetlands</strong></td><td>Waterlogged, anaerobic soil</td><td>Largest natural source</td></tr>
+      <tr><td><strong>Rice paddies</strong></td><td>Flooded fields, anaerobic</td><td>Major agricultural source</td></tr>
+      <tr><td><strong>Ruminant digestion</strong></td><td>Anaerobic gut fermentation</td><td>Cattle, sheep, goats</td></tr>
+      <tr><td><strong>Landfills</strong></td><td>Decomposition without oxygen</td><td>Growing source</td></tr>
+      <tr><td><strong>Permafrost thaw</strong></td><td>Frozen organic matter decomposes</td><td>Concerning feedback loop</td></tr>
+    </table>
+  </div>
+  <div class="kt hl-accent"><strong>Methane (CH₄)</strong> is ~80× more potent as a greenhouse gas than CO₂ over a 20-year period, making it a critical climate concern.</div>
+</div>
+
+<!-- ==================== SLIDE 18: HL 2.3.16 ==================== -->
+<div class="slide" data-sec="hl">
+  <div class="section-tag hl">HL — 2.3.16</div>
+  <h2>Methane's Atmospheric Lifetime<span class="hl-badge">HL</span></h2>
+  <div class="kt hl-accent"><strong>Key Understanding</strong>Methane has a residence time of about <em>10 years</em> in the atmosphere and is eventually <em>oxidized to carbon dioxide</em>.</div>
+  <div class="card">
+    <h3>Methane in the Atmosphere</h3>
+    <div class="eq" style="font-size:15px">
+      <span class="label">Oxidation reaction</span>
+      CH₄ + 2O₂ <span class="arrow">→</span> CO₂ + 2H₂O
+    </div>
+    <p style="font-size:14px;margin-top:12px">Unlike CO₂ (which persists for centuries), methane is relatively short-lived. However, while it is in the atmosphere, it is an extremely powerful greenhouse gas.</p>
+  </div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Implications</h3>
+      <ul class="bullets hl">
+        <li>Reducing methane emissions gives <strong>fast climate benefits</strong></li>
+        <li>Methane reduction is one of the most <strong>cost-effective</strong> climate strategies</li>
+        <li>But methane sources are diverse and widespread</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>The Paradox</h3>
+      <p style="font-size:14px">Methane is short-lived but potent. CO₂ is long-lived but less potent per molecule. Both matter — methane for near-term warming, CO₂ for long-term climate trajectory.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 19: 2.3.17 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.17</div>
+  <h2>The Nitrogen Cycle: Overview</h2>
+  <div class="kt"><strong>Key Understanding</strong>The nitrogen cycle contains <em>organic and inorganic stores</em>.</div>
+  <img src="/slides/images/ess-2-3-nitrogen-cycle.jpg" alt="The Nitrogen Cycle Diagram" class="slide-img" />
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Inorganic Nitrogen Stores</h3>
+      <ul class="bullets">
+        <li><strong>Atmosphere:</strong> N₂ gas (78% of atmosphere)</li>
+        <li><strong>Soil:</strong> ammonium (NH₄⁺), nitrate (NO₃⁻)</li>
+        <li><strong>Water:</strong> dissolved nitrates and ammonia</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Organic Nitrogen Stores</h3>
+      <ul class="bullets">
+        <li><strong>Living organisms:</strong> proteins, DNA, chlorophyll</li>
+        <li><strong>Dead organic matter:</strong> leaf litter, detritus</li>
+        <li><strong>Waste products:</strong> animal excretion (urea, ammonia)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="kt"><strong>Key challenge:</strong> Atmospheric N₂ is abundant but cannot be used directly by most organisms — it must first be "fixed" into a usable form (NH₃ or NO₃⁻).</div>
+</div>
+
+<!-- ==================== SLIDE 20: 2.3.18 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.18</div>
+  <h2>Bacteria in the Nitrogen Cycle</h2>
+  <div class="kt"><strong>Key Understanding</strong><em>Bacteria</em> have essential roles in the nitrogen cycle.</div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Process</th><th>Bacteria Type</th><th>What Happens</th></tr>
+      <tr><td><strong>Nitrogen fixation</strong></td><td>Nitrogen-fixing bacteria (e.g., <em>Rhizobium</em>)</td><td>N₂ → NH₃ (ammonia)</td></tr>
+      <tr><td><strong>Nitrification</strong></td><td>Nitrifying bacteria</td><td>NH₃ → NO₂⁻ → NO₃⁻ (nitrate)</td></tr>
+      <tr><td><strong>Ammonification</strong></td><td>Decomposer bacteria</td><td>Organic N → NH₃ (ammonia)</td></tr>
+      <tr><td><strong>Denitrification</strong></td><td>Denitrifying bacteria</td><td>NO₃⁻ → N₂ (back to atmosphere)</td></tr>
+    </table>
+  </div>
+  <div class="kt"><strong>Without bacteria, the nitrogen cycle would stop.</strong> No other organisms can convert N₂ gas into usable forms — bacteria are the gatekeepers of this essential element.</div>
+</div>
+
+<!-- ==================== SLIDE 21: 2.3.19 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.19</div>
+  <h2>Denitrification Conditions</h2>
+  <div class="kt"><strong>Key Understanding</strong>Denitrification only happens in <em>anaerobic conditions</em>, such as soils that are waterlogged.</div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Why Anaerobic?</h3>
+      <ul class="bullets">
+        <li>Denitrifying bacteria use NO₃⁻ instead of O₂ for respiration</li>
+        <li>Only possible when oxygen is absent</li>
+        <li>Waterlogged soils, wetlands, flooded rice paddies</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Impact</h3>
+      <ul class="bullets">
+        <li>Removes usable nitrogen from soil → reduced fertility</li>
+        <li>Returns N₂ to atmosphere → closes the cycle</li>
+        <li>Over-irrigation can increase denitrification → crop yield loss</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 22: 2.3.20 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.20</div>
+  <h2>Plants and Nitrogen Fixation</h2>
+  <div class="kt"><strong>Key Understanding</strong>Plants cannot fix nitrogen so atmospheric dinitrogen is unavailable to them unless they form <em>mutualistic associations</em> with nitrogen-fixing bacteria.</div>
+  <div class="card">
+    <h3>The Legume–Rhizobium Mutualism</h3>
+    <div class="flow">
+      <div class="flow-node" style="background:#e8f8ee;border-color:#2e9e5a">Legume<br/><span style="font-size:11px">(plant)</span></div>
+      <div class="flow-arrow" style="font-size:16px">⇄</div>
+      <div class="flow-node" style="background:#f3eefa;border-color:#8b5cf6">Rhizobium<br/><span style="font-size:11px">(bacteria in root nodules)</span></div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top:8px">
+      <div style="font-size:14px"><strong>Plant provides:</strong> carbohydrates (energy) + shelter in root nodules</div>
+      <div style="font-size:14px"><strong>Bacteria provides:</strong> fixed nitrogen (NH₃) the plant can use</div>
+    </div>
+  </div>
+  <div class="kt"><strong>Other nitrogen fixers:</strong> cyanobacteria in rice paddies, free-living soil bacteria (<em>Azotobacter</em>), and lightning (small abiotic contribution).</div>
+</div>
+
+<!-- ==================== SLIDE 23: 2.3.21 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.21</div>
+  <h2>Nitrogen Cycle Flows</h2>
+  <div class="kt"><strong>Key Understanding</strong>Flows in the nitrogen cycle include <em>mineral uptake by producers, consumption, excretion, death, decomposition and ammonification</em>.</div>
+  <div class="flow">
+    <div class="flow-node" style="background:#e8f0fa;border-color:#3b82f6">N₂<br/><span style="font-size:11px">Atmosphere</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node" style="background:#e8f8ee;border-color:#2e9e5a">NO₃⁻<br/><span style="font-size:11px">Soil</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node" style="background:#fff9e6;border-color:#d97706">Producers<br/><span style="font-size:11px">Uptake</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node" style="background:#f3eefa;border-color:#8b5cf6">Consumers<br/><span style="font-size:11px">Feeding</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node" style="background:#f5f7fa;border-color:#888">Decomposers<br/><span style="font-size:11px">Ammonification</span></div>
+  </div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Flow</th><th>Process</th></tr>
+      <tr><td><strong>Mineral uptake</strong></td><td>Producers absorb NO₃⁻ / NH₄⁺ from soil</td></tr>
+      <tr><td><strong>Consumption</strong></td><td>N moves up food chain when organisms eat each other</td></tr>
+      <tr><td><strong>Excretion</strong></td><td>Animals excrete nitrogenous waste (urea, ammonia)</td></tr>
+      <tr><td><strong>Death</strong></td><td>Dead organisms contain organic nitrogen</td></tr>
+      <tr><td><strong>Decomposition</strong></td><td>Decomposers break down organic N</td></tr>
+      <tr><td><strong>Ammonification</strong></td><td>Organic N → NH₃ (ammonia) in soil</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 24: 2.3.22 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.22</div>
+  <h2>Human Impacts on the Nitrogen Cycle</h2>
+  <div class="kt"><strong>Key Understanding</strong>Human activities such as <em>deforestation, agriculture, aquaculture and urbanization</em> change the nitrogen cycle.</div>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Activity</th><th>Impact on Nitrogen Cycle</th></tr>
+      <tr><td><strong>Agriculture (fertilizers)</strong></td><td>Massive increase in reactive N (NO₃⁻) in soils and waterways</td></tr>
+      <tr><td><strong>Deforestation</strong></td><td>Removes vegetation that would take up nitrogen → N accumulates in soil</td></tr>
+      <tr><td><strong>Aquaculture</strong></td><td>Fish waste and uneaten feed release ammonia into water</td></tr>
+      <tr><td><strong>Urbanization</strong></td><td>Sewage, vehicle emissions (NOₓ), industry release reactive N</td></tr>
+      <tr><td><strong>Burning fossil fuels</strong></td><td>Produces nitrogen oxides (NOₓ) → acid rain + smog</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 25: 2.3.23 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.23</div>
+  <h2>The Haber Process</h2>
+  <div class="kt"><strong>Key Understanding</strong>The <em>Haber process</em> is an industrial process that produces <em>ammonia</em> from nitrogen and hydrogen for use as fertilizer.</div>
+  <div class="card">
+    <div class="eq" style="font-size:15px">
+      <span class="label">Haber Process</span>
+      N₂ + 3H₂ <span class="arrow">→</span> 2NH₃ <span style="font-size:12px;color:var(--muted)">(high temperature, high pressure, iron catalyst)</span>
+    </div>
+  </div>
+  <div class="card-grid cols-2">
+    <div class="card">
+      <h3>Why It Matters</h3>
+      <ul class="bullets">
+        <li>Made synthetic nitrogen fertilizer possible</li>
+        <li>Enabled the <strong>Green Revolution</strong> → food for billions</li>
+        <li>Without it, Earth could only support ~4 billion people</li>
+        <li>~50% of nitrogen in human bodies came via Haber process</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>The Environmental Cost</h3>
+      <ul class="bullets">
+        <li>Massive increase in reactive nitrogen in environment</li>
+        <li>Runoff → eutrophication of waterways</li>
+        <li>N₂O emissions → potent greenhouse gas</li>
+        <li>Soil acidification</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tip">Fritz Haber won the Nobel Prize for this invention — but it has been called both "bread from air" and a "dual-use" technology, as the same process was used to make explosives in WWI.</div>
+</div>
+
+<!-- ==================== SLIDE 26: 2.3.24 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.24</div>
+  <h2>The Nitrogen Planetary Boundary: CROSSED</h2>
+  <div class="kt"><strong>Key Understanding</strong>Increases in nitrates in the biosphere from human activities have led to the <em>planetary boundary for the nitrogen cycle being crossed</em>, making irreversible changes to Earth systems likely.</div>
+  <div class="card">
+    <h3>What Happens When the Boundary Is Crossed?</h3>
+    <ul class="bullets">
+      <li><strong>Eutrophication:</strong> excess nitrogen → algal blooms → oxygen depletion → dead zones</li>
+      <li><strong>Biodiversity loss:</strong> nitrogen-loving species outcompete others → species decline</li>
+      <li><strong>Groundwater contamination:</strong> nitrates in drinking water → health risks</li>
+      <li><strong>Acid rain:</strong> NOₓ emissions → soil and water acidification</li>
+      <li><strong>Climate change:</strong> N₂O is 298× more potent than CO₂ as a greenhouse gas</li>
+    </ul>
+  </div>
+  <div class="kt"><strong>The scale of the problem:</strong> Humans now fix more nitrogen industrially (Haber process) than all natural terrestrial processes combined.</div>
+</div>
+
+<!-- ==================== SLIDE 27: 2.3.25 ==================== -->
+<div class="slide" data-sec="nitrogen">
+  <div class="section-tag">2.3.25</div>
+  <h2>Global Collaboration on Nitrogen</h2>
+  <div class="kt"><strong>Key Understanding</strong><em>Global collaboration</em> is needed to address the uncontrolled use of nitrogen in industrial and agricultural processes and bring the nitrogen cycle back within planetary boundaries.</div>
+  <div class="card">
+    <h3>What Needs to Happen</h3>
+    <ul class="bullets">
+      <li><strong>Precision agriculture:</strong> apply fertilizer only where and when needed</li>
+      <li><strong>Organic farming:</strong> reduce synthetic fertilizer dependence</li>
+      <li><strong>Wastewater treatment:</strong> remove nitrogen before discharge</li>
+      <li><strong>Dietary shifts:</strong> less meat = less nitrogen-intensive agriculture</li>
+      <li><strong>International agreements:</strong> coordinated targets for nitrogen reduction</li>
+      <li><strong>Cover crops and crop rotation:</strong> reduce nitrogen fertilizer needs</li>
+    </ul>
+  </div>
+  <div class="tip">The 2023 UNEP resolution on nitrogen called for halving nitrogen waste by 2030 — similar in ambition to the Paris Agreement for climate. Know this as a key policy example.</div>
+</div>
+
+<!-- ==================== SLIDE 28: GLOSSARY ==================== -->
+<div class="slide" data-sec="summary">
+  <div class="section-tag">Key Terms Glossary</div>
+  <h2>Essential Vocabulary</h2>
+  <div class="card">
+    <table class="tbl">
+      <tr><th style="width:35%">Term</th><th>Definition</th></tr>
+      <tr><td><strong>Biogeochemical cycle</strong></td><td>Cycling of chemical elements through biotic and abiotic components</td></tr>
+      <tr><td><strong>Store</strong></td><td>Place where an element is held in a cycle</td></tr>
+      <tr><td><strong>Sink</strong></td><td>Store absorbing more than it releases (net uptake)</td></tr>
+      <tr><td><strong>Source</strong></td><td>Store releasing more than it absorbs (net output)</td></tr>
+      <tr><td><strong>Carbon sequestration</strong></td><td>Capturing atmospheric CO₂ and storing it in solid/liquid form</td></tr>
+      <tr><td><strong>Ocean acidification</strong></td><td>Decrease in ocean pH from dissolved CO₂</td></tr>
+      <tr><td><strong>Methane (CH₄)</strong></td><td>Greenhouse gas produced by methanogenic bacteria in anaerobic conditions</td></tr>
+      <tr><td><strong>Nitrogen fixation</strong></td><td>Conversion of N₂ gas to NH₃ by bacteria</td></tr>
+      <tr><td><strong>Nitrification</strong></td><td>Conversion of NH₃ to NO₃⁻ by bacteria</td></tr>
+      <tr><td><strong>Denitrification</strong></td><td>Conversion of NO₃⁻ back to N₂ in anaerobic conditions</td></tr>
+      <tr><td><strong>Ammonification</strong></td><td>Decomposition of organic N → NH₃</td></tr>
+      <tr><td><strong>Haber process</strong></td><td>Industrial production of NH₃ from N₂ and H₂</td></tr>
+      <tr><td><strong>Eutrophication</strong></td><td>Nutrient enrichment of water → algal blooms → oxygen depletion</td></tr>
+      <tr><td><strong>Residence time</strong></td><td>Average time an element spends in a particular store</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== SLIDE 29: EXAM TIPS ==================== -->
+<div class="slide" data-sec="summary">
+  <div class="section-tag">Exam Preparation</div>
+  <h2>Key Takeaways &amp; Exam Tips</h2>
+  <div class="card">
+    <h3>Must-Know Processes</h3>
+    <div class="card-grid cols-2">
+      <div class="card"><p style="font-size:14px"><strong>Carbon Cycle</strong></p><p style="font-size:13px;color:var(--muted)">Photosynthesis ↔ Respiration ↔ Decomposition ↔ Fossil fuel burning</p></div>
+      <div class="card"><p style="font-size:14px"><strong>Nitrogen Cycle</strong></p><p style="font-size:13px;color:var(--muted)">Fixation → Nitrification → Uptake → Ammonification → Denitrification</p></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Common Exam Patterns</h3>
+    <ul class="bullets">
+      <li><strong>Trace a cycle:</strong> follow an element through all stores and flows</li>
+      <li><strong>Explain human disruption:</strong> which store/flow is affected and how</li>
+      <li><strong>Ocean acidification:</strong> know the chemistry and biological consequences</li>
+      <li><strong>Nitrogen bacteria:</strong> match each type to its process (fixation, nitrification, denitrification, ammonification)</li>
+      <li><strong>Haber process:</strong> benefits vs environmental costs</li>
+      <li><strong>Compare carbon and nitrogen cycles:</strong> both involve bacteria, but carbon also involves photosynthesis/respiration</li>
+      <li><strong>Planetary boundaries:</strong> know which cycles have been crossed and consequences</li>
+    </ul>
+  </div>
+  <div class="tip" style="margin-top:12px"><strong>For 9-mark essays:</strong> Use specific examples, name the bacteria/processes, and always link human activities to specific disruptions in the cycle. Show you understand cause → effect → consequence chains.</div>
+  <div class="card" style="text-align:center;margin-top:16px;background:#f5f7fa;border:1.5px solid var(--blue)">
+    <p style="font-size:16px;font-weight:600">You've covered all 25 syllabus points ✅</p>
+    <p style="font-size:13px;color:var(--muted)">2.3.1 – 2.3.21 (SL) + 2.3.12 – 2.3.16 (HL)</p>
+  </div>
+</div>
+
+</div><!-- /deck -->
+
+<button id="prevBtn" disabled aria-label="Previous slide">‹</button>
+<button id="nextBtn" aria-label="Next slide">›</button>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+let current = 0;
+document.getElementById('prevBtn').addEventListener('click', () => go(-1));
+document.getElementById('nextBtn').addEventListener('click', () => go(1));
+function goTo(idx) {
+  if (idx < 0 || idx >= total) return;
+  slides[current].classList.remove('active');
+  current = idx;
+  slides[current].classList.add('active');
+  document.getElementById('prevBtn').disabled = current === 0;
+  document.getElementById('nextBtn').disabled = current === total - 1;
+  document.getElementById('progress').style.width = ((current + 1) / total * 100) + '%';
+  document.getElementById('deck').scrollTop = 0;
+}
+function go(dir) { goTo(current + dir); }
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); go(1); }
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); go(-1); }
+});
+goTo(0);
+</script>
+</body>
+</html>

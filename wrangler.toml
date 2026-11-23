@@ -1,0 +1,63 @@
+# Cloudflare Pages Configuration for theibresources.com
+# Place this file in the project root (same level as package.json)
+
+name = "theibresources"
+compatibility_date = "2024-12-01"
+pages_build_output_dir = "out"
+
+# Build command (run via npm run build:cf)
+# [build]
+# command = "npm run build:cf"
+# destination = "out"
+
+# Environment variables (set in Cloudflare Pages dashboard > Settings > Environment variables)
+# CONTACT_EMAIL = "your@email.com"
+# EMAIL_API_KEY = "your-sendgrid-mailgun-resend-key"
+# EMAIL_API_PROVIDER = "sendgrid"  # or "mailgun" or "resend"
+# ALLOWED_ORIGIN = "https://theibresources.com"
+# TURNSTILE_SECRET_KEY = "optional-turnstile-secret"  # for bot protection
+
+# Custom domain setup (after deployment):
+# 1. Go to Cloudflare Pages > your project > Custom domains
+# 2. Add "theibresources.com" and "www.theibresources.com"
+# 3. Cloudflare will auto-configure DNS if domain is on Cloudflare
+# 4. If external DNS: add CNAME for www -> <project>.pages.dev, and A/AAAA for apex
+
+# Redirects (optional - create _redirects file in public/ folder)
+# Example _redirects content:
+# /ess/* /courses/ess/:splat  301
+# /biology/* /courses/biology/:splat  301
+# /ia/ess /ia-guide/ess  301
+# /ia/bio /ia-guide/biology  301
+
+# Headers (optional - create _headers file in public/ folder)
+# Example _headers content:
+# /*
+#   X-Frame-Options: DENY
+#   X-Content-Type-Options: nosniff
+#   Referrer-Policy: strict-origin-when-cross-origin
+#   Permissions-Policy: camera=(), microphone=(), geolocation=()
+#
+# /slides/*
+#   Cache-Control: public, max-age=31536000, immutable
+#
+# /_next/static/*
+#   Cache-Control: public, max-age=31536000, immutable
+
+# Workers integration (for contact form)
+# 1. Create Worker in Cloudflare dashboard: workers.theibresources.com/contact
+# 2. Paste workers/contact.ts code
+# 3. Add environment variables in Worker settings
+# 4. Add route: theibresources.com/api/contact -> Worker
+# 5. Update contact page to POST to /api/contact
+
+# Analytics (Cloudflare Web Analytics - free, privacy-friendly)
+# 1. Cloudflare Dashboard > Web Analytics > Add site
+# 2. Add script tag to layout.tsx (already configured via next/script)
+# 3. Or use Plausible: <script defer data-domain="theibresources.com" src="https://plausible.io/js/script.js"></script>
+
+# Performance tips:
+# - Static export (output: "export") already configured
+# - Images: unoptimized: true for Cloudflare Pages compatibility
+# - Slides in public/slides/ served directly from edge
+# - Consider Cloudflare Images for future optimization

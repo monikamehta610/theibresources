@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IB DP Biology B3.3 — Muscle and Motility</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  :root{--blue:#0A6EBD;--blue-light:#E8F4FD;--blue-dark:#064A7A;--orange:#FF6B35;--orange-light:#FFF3ED;--green:#2E8B57;--green-light:#EAF7F0;--red:#C0392B;--red-light:#FDECEB;--yellow:#F0AD4E;--yellow-light:#FFF9E6;--gray-50:#FAFBFC;--gray-100:#F4F5F7;--gray-200:#E8EAED;--gray-400:#9AA0A6;--gray-600:#5F6368;--gray-800:#202124;--hl:#7B2D8E;--hl-light:#F5EAF8;--hl-border:#C9A0DC}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:'Sora',-apple-system,sans-serif;background:#fff;color:var(--gray-800);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .slide{display:none;min-height:100vh;padding:3rem 2rem 6rem;max-width:900px;margin:0 auto}.slide.active{display:block}
+  h1{font-size:2.4rem;font-weight:700;line-height:1.2;margin-bottom:.5rem}h2{font-size:1.65rem;font-weight:600;line-height:1.3;margin-bottom:1rem}h3{font-size:1.15rem;font-weight:600;margin-bottom:.5rem}
+  p{margin-bottom:.9rem;font-size:.95rem}strong{font-weight:600}
+  .section-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .7rem;border-radius:4px;margin-bottom:.8rem;background:var(--blue-light);color:var(--blue)}
+  .hl-badge{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;background:var(--hl);color:#fff;margin-left:.5rem;vertical-align:middle}
+  .kt{background:var(--gray-100);border-left:4px solid var(--blue);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1.2rem 0;font-size:.92rem}.kt strong{color:var(--blue);display:block;margin-bottom:.3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+  .card{background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:1.2rem 1.4rem;margin:1rem 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .tbl{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}.tbl th{background:var(--gray-100);font-weight:600;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--gray-200);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gray-600)}.tbl td{padding:.55rem .8rem;border-bottom:1px solid var(--gray-200);vertical-align:top}.tbl tr:last-child td{border-bottom:none}
+  .bullets{list-style:none;padding:0;margin:.8rem 0}.bullets li{position:relative;padding-left:1.4rem;margin-bottom:.5rem;font-size:.92rem}.bullets li::before{content:'';position:absolute;left:0;top:.55rem;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+  .tip{background:var(--orange-light);border-left:4px solid var(--orange);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1.2rem 0;font-size:.88rem}.tip strong{color:var(--orange)}
+  .case{background:var(--green-light);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1rem 0;font-size:.88rem}.case strong{color:var(--green)}
+  
+  /* New callout boxes for Skills and Applications */
+  .skill-box {background:var(--yellow-light);border-left:4px solid var(--yellow);border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.92rem;}
+  .skill-box strong {color:var(--yellow);display:block;margin-bottom:.3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;}
+  
+  .app-box {background:var(--blue-light);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.92rem;}
+  .app-box strong {color:var(--blue);display:block;margin-bottom:.3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;}
+
+  .slide-img{width:100%;max-height: 500px; border-radius:10px;margin:1.5rem 0;box-shadow:0 4px 12px rgba(10, 110, 189, 0.15);object-fit:contain; background: #fff;}
+  .cover-img{width:100%;height:35vh;object-fit:cover;border-radius:16px;margin-bottom:2rem;box-shadow:0 4px 20px rgba(0,0,0,.15);object-position:center 40%}
+  
+  /* Image Grid */
+  .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .image-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+  /* Flip Card */
+  .flip-cards-container { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+  .flip-card { background-color: transparent; width: calc(50% - 0.5rem); height: 180px; perspective: 1000px; cursor: pointer; }
+  .flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
+  .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+  .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.2rem; border: 1px solid var(--gray-200); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+  .flip-card-front { background-color: var(--blue-light); color: var(--blue-dark); font-weight: 700; font-size: 1.2rem; }
+  .flip-card-back { background-color: var(--hl-light); color: var(--gray-800); transform: rotateY(180deg); font-size: 0.95rem; }
+  
+  @media(max-width: 640px) { .flip-card { width: 100%; } }
+
+  /* Details & Summary */
+  details { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 8px; padding: 1rem; margin-bottom: 1rem; transition: background 0.2s; }
+  details:hover { background: var(--gray-100); }
+  summary { font-weight: 600; cursor: pointer; outline: none; list-style: none; display: flex; align-items: center; justify-content: space-between; font-size: 1.05rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; font-size: 1.4rem; color: var(--blue); font-weight: 300; }
+  details[open] summary::after { content: '−'; }
+  details p { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: 0.95rem; line-height: 1.6; }
+
+  /* CSS Flow Diagrams */
+  .css-flow { display: flex; flex-direction: column; gap: 0.5rem; margin: 1.5rem auto; align-items: center; max-width: 600px; }
+  .flow-step { background: var(--gray-50); border: 2px solid var(--blue); border-radius: 8px; padding: 1rem; width: 100%; text-align: center; font-weight: 500; color: var(--gray-800); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+  .flow-arrow { color: var(--blue); font-size: 1.5rem; font-weight: bold; line-height: 1; margin: 0.2rem 0; }
+  .flow-step.alt { border-color: var(--green); background: var(--green-light); color: var(--green); }
+  .flow-step.hl { border-color: var(--hl); background: var(--hl-light); color: var(--hl); }
+
+  .progress-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:var(--blue);z-index:1000;transition:width .3s ease}
+  .nav{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--gray-200);padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:999}
+  .nav-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border:1px solid var(--gray-200);border-radius:8px;background:#fff;color:var(--gray-800);font-family:inherit;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .15s}.nav-btn:hover{background:var(--gray-100);border-color:var(--gray-400)}.nav-btn:disabled{opacity:.3;cursor:default}
+  .nav-dots{display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:60%}.nav-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-200);border:none;cursor:pointer;padding:0;transition:all .2s}.nav-dot.active{background:var(--blue);width:20px;border-radius:4px}.nav-dot.hl-dot.active{background:var(--hl)}
+  .nav-counter{font-size:.72rem;color:var(--gray-400);white-space:nowrap;margin:0 .5rem}
+  .cover{display:flex;flex-direction:column;justify-content:center;min-height:90vh;text-align:center}.cover h1{font-size:2.6rem;margin-bottom:.3rem}.cover .subtitle{font-size:1.1rem;color:var(--gray-600);margin-bottom:2rem}.cover .stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}.cover .stat{text-align:center}.cover .stat-num{font-size:2rem;font-weight:700;color:var(--blue)}.cover .stat-label{font-size:.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.08em}
+  .completion{text-align:center;padding-top:4rem}.completion .check{font-size:4rem;margin-bottom:1rem}.completion h1{font-size:2rem;margin-bottom:.5rem}.completion .point-count{font-size:3rem;font-weight:700;color:var(--blue);margin:1rem 0}.completion .point-label{font-size:.85rem;color:var(--gray-600)}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1rem 0}.compare-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:1rem}.compare-card h4{font-size:.9rem;margin-bottom:.4rem}.compare-card p{font-size:.85rem;margin:0}.compare-card ul{font-size:.85rem;padding-left:1.2rem;margin:.4rem 0 0}
+  @media(max-width:640px){.slide{padding:2rem 1.2rem 6rem}h1{font-size:1.7rem}h2{font-size:1.3rem}.cover h1{font-size:1.9rem}.cover .stat-num{font-size:1.5rem}.compare-grid{grid-template-columns:1fr}.tbl{font-size:.8rem}.tbl th,.tbl td{padding:.45rem .5rem}.nav-dots{max-width:45%}.nav-dot{width:6px;height:6px}.nav-dot.active{width:14px}.cover-img{height:28vh}}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- SLIDE 0 — COVER -->
+<div class="slide active" id="slide-0">
+  <div class="cover">
+    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=900" alt="Athlete in motion" class="cover-img">
+    <div class="section-tag hl-tag">IB DP Biology 2025: Form and Function</div>
+    <h1>B3.3 — Muscle and Motility</h1>
+    <p class="subtitle">Theme B: Form and Function · Higher Level Only</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">10</div><div class="stat-label">Understandings</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">HL Extensions</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 1 — B3.3.1 -->
+<div class="slide" id="slide-1">
+  <div class="section-tag hl-tag">B3.3.1 <span class="hl-badge">HL Only</span></div>
+  <h2>Adaptations for Movement</h2>
+  <div class="kt"><strong>Key Understanding</strong> Movement is a universal feature of living organisms, with complex and varied adaptations emerging in both motile and sessile species to optimize their survival and reproduction.</div>
+  
+  <p>Movement is considered a fundamental, defining characteristic of life itself. However, the exact physiological mechanisms, anatomical structures, and energetic pathways involved depend dramatically on the organism's lifestyle and evolutionary niche. Movement can be macroscopic (whole-body locomotion) or microscopic (cellular streaming, transport of materials).</p>
+  
+  <div class="compare-grid">
+    <div class="compare-card">
+      <h4 style="color:var(--blue)">Motile Organisms</h4>
+      <p>Organisms capable of independent locomotion—moving their entire body from one place to another.</p>
+      <ul>
+        <li>Extensively rely on highly structured musculoskeletal systems (muscles acting on rigid skeletal levers).</li>
+        <li>Specialized morphological adaptations for specific fluid dynamics: swimming (streamlining), walking (bipedalism or quadrupedalism), flying (aerodynamic wings).</li>
+        <li>Requires massive and continuous energy expenditure ($ATP$) generated through cellular respiration.</li>
+      </ul>
+    </div>
+    <div class="compare-card">
+      <h4 style="color:var(--green)">Sessile Organisms</h4>
+      <p>Organisms that are permanently attached or fixed in one place (e.g., barnacles, corals, plants, sponges).</p>
+      <ul>
+        <li>They still exhibit movement! Plants grow towards directional light (phototropism) or gravity (gravitropism).</li>
+        <li>Movement of internal fluids (sap in plants) or specialized feeding appendages (tentacles or cilia for filter feeding).</li>
+        <li>Frequently feature highly motile larval stages for geographical dispersal.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1549480017-d76466a4b7e8?auto=format&fit=crop&w=500&q=80" alt="Cheetah running - highly motile">
+    <img src="https://images.unsplash.com/photo-1582236894371-92b0c4103135?auto=format&fit=crop&w=500&q=80" alt="Coral reef - sessile organisms">
+  </div>
+</div>
+
+<!-- SLIDE 2 — B3.3.2 -->
+<div class="slide" id="slide-2">
+  <div class="section-tag hl-tag">B3.3.2 <span class="hl-badge">HL Only</span></div>
+  <h2>The Sarcomere and Sliding Filament Model</h2>
+  <div class="kt"><strong>Key Understanding</strong> Muscle contraction is explained by the sliding filament model, involving the precise, ATP-dependent interactions of actin and myosin within the structural limits of the sarcomere.</div>
+  
+  <p>Skeletal muscles are highly organized tissues composed of repeating functional units called <strong>sarcomeres</strong>, which are bordered by dark bands known as Z-lines. The entire contraction of a macroscopic muscle is the cumulative result of millions of these microscopic sarcomeres shortening simultaneously.</p>
+  
+  <div class="flip-cards-container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Actin</div>
+        <div class="flip-card-back">The thin filament in the sarcomere. It contains binding sites for myosin heads, which are blocked by tropomyosin when the muscle is relaxed.</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Myosin</div>
+        <div class="flip-card-back">The thick filament in the sarcomere. It has bulbous heads that bind to actin and perform the power stroke, pulling actin towards the center.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="css-flow">
+    <div class="flow-step hl">Myosin heads, energized by ATP, bind to exposed binding sites on the actin filaments (forming <strong>cross-bridges</strong>)</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step hl">Through $ATP$ hydrolysis to $ADP + P_i$, the myosin heads pivot (the "power stroke")</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step hl">Actin filaments are forcefully pulled towards the M-line (the center of the sarcomere)</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step alt">The sarcomere shortens (Z-lines move closer together), but the actin and myosin filaments themselves <em>do not</em> change length!</div>
+  </div>
+</div>
+
+<!-- SLIDE 3 — B3.3.3 & B3.3.8 -->
+<div class="slide" id="slide-3">
+  <div class="section-tag hl-tag">B3.3.3 / B3.3.8 <span class="hl-badge">HL Only</span></div>
+  <h2>Titin, Relaxation, and Antagonistic Muscles</h2>
+  <div class="kt"><strong>B3.3.3</strong> The role of the protein titin in elastic recoil, and the physiological necessity of antagonistic muscles to achieve muscle relaxation.</div>
+  
+  <p>Muscles possess a fundamental limitation: they can only actively <em>pull</em> (contract); they cannot actively <em>push</em> themselves back to their original extended length. Therefore, to reverse a movement, muscles must work in <strong>antagonistic pairs</strong>—when one contracts, the other must relax and be passively stretched.</p>
+  
+  <div class="app-box">
+    <strong>Application (B3.3.8): Intercostal Muscles</strong>
+    <p>The <strong>internal and external intercostal muscles</strong> (located between the ribs) are a classic antagonistic pair crucial for ventilation. When the external intercostals contract, they pull the ribcage upwards and outwards (inspiration), while the internal intercostals relax. During forced expiration, the internal intercostals contract to forcefully pull the ribs downwards and inwards.</p>
+  </div>
+  
+  <div class="card">
+    <strong style="color:var(--hl)">The Role of Titin in Sarcomere Integrity</strong>
+    <ul class="bullets">
+      <li><strong>Titin</strong> is a massive, spring-like protein situated within the sarcomere, physically connecting the Z-line to the M-line.</li>
+      <li>It prevents disastrous overstretching of the muscle fiber and provides critical <strong>elastic recoil</strong> when the muscle relaxes.</li>
+      <li>When an antagonistic muscle pulls the original contracted muscle back to its starting length, titin helps accurately restore the sarcomere's highly ordered resting structure.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 4 — B3.3.4 -->
+<div class="slide" id="slide-4">
+  <div class="section-tag hl-tag">B3.3.4 <span class="hl-badge">HL Only</span></div>
+  <h2>Motor Units and Neuromuscular Junctions</h2>
+  <div class="kt"><strong>Key Understanding</strong> The structure and function of motor units, emphasizing the synaptic communication between motor neurons, muscle fibers, and specialized neuromuscular junctions.</div>
+  
+  <p>To coordinate muscle contraction efficiently, a single motor neuron does not connect to just one muscle fiber. Instead, its axon branches out to innervate multiple muscle fibers simultaneously. This entire functional complex—the motor neuron and all the muscle fibers it innervates—is called a <strong>motor unit</strong>.</p>
+  
+  <div class="css-flow">
+    <div class="flow-step hl">Action potential arrives at the synaptic terminal of a motor neuron</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step hl">Neurotransmitter (Acetylcholine, $ACh$) is released via exocytosis across the <strong>neuromuscular junction</strong></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step hl">ACh binds to receptors on the muscle fiber membrane (sarcolemma), triggering depolarization and an action potential in the muscle</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step alt">Calcium ions ($Ca^{2+}$) are released from the sarcoplasmic reticulum, binding to troponin and initiating the sliding filament mechanism</div>
+  </div>
+  
+  <div class="tip"><strong>Exam Tip:</strong> The size of the motor unit dictates the precision of movement. Fine, precise motor control (like the muscles controlling eye movement or fingers) relies on very small motor units (1 neuron to ~10 fibers). Conversely, powerful, gross movements (like in your quadriceps) utilize massively large motor units (1 neuron to ~1000+ fibers).</div>
+</div>
+
+<!-- SLIDE 5 — B3.3.5 & B3.3.6 -->
+<div class="slide" id="slide-5">
+  <div class="section-tag hl-tag">B3.3.5 / B3.3.6 <span class="hl-badge">HL Only</span></div>
+  <h2>Skeletons and Synovial Joints</h2>
+  <div class="kt"><strong>B3.3.5</strong> Skeletons provide essential rigid anchorage points for muscles and act as levers to magnify force or speed.</div>
+  <div class="kt"><strong>B3.3.6</strong> Movement dynamics at synovial joints, such as the human hip and knee.</div>
+  
+  <p>Skeletons—whether internal <strong>endoskeletons</strong> (in humans and other vertebrates) or external <strong>exoskeletons</strong> (in insects and crustaceans)—provide a rigid structural framework. When muscles contract, they transmit force to bones via tendons, utilizing the bones as mechanical levers to produce movement across joints.</p>
+  
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1574514578161-0427845baad9?auto=format&fit=crop&w=500&q=80" alt="X-ray of joints showing skeletal structure">
+    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=500&q=80" alt="Athletic movement requiring complex synovial joints">
+  </div>
+
+  <table class="tbl">
+    <tr><th>Component</th><th>Function in Synovial Joints</th></tr>
+    <tr>
+      <td><strong>Bones</strong></td>
+      <td>Provide a rigid structural framework, protect internal organs, and act as mechanical levers.</td>
+    </tr>
+    <tr>
+      <td><strong>Cartilage</strong></td>
+      <td>Smooth, resilient tissue covering the ends of bones to reduce friction and absorb compressive shock during movement.</td>
+    </tr>
+    <tr>
+      <td><strong>Synovial Fluid</strong></td>
+      <td>A viscous fluid secreted by the synovial membrane that lubricates the joint cavity, minimizing friction and supplying vital nutrients to avascular cartilage.</td>
+    </tr>
+    <tr>
+      <td><strong>Ligaments</strong></td>
+      <td>Strong, fibrous bands of connective tissue linking bone to bone, providing joint stability and strictly restricting excessive or abnormal movement.</td>
+    </tr>
+    <tr>
+      <td><strong>Tendons</strong></td>
+      <td>Tough cords connecting muscle to bone, effectively transmitting the mechanical force of muscle contraction to the skeleton.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- SLIDE 6 — B3.3.7 & B3.3.9 & B3.3.10 -->
+<div class="slide" id="slide-6">
+  <div class="section-tag hl-tag">Skills & Applications <span class="hl-badge">HL Only</span></div>
+  <h2>Skills, Ecology, and Adaptations</h2>
+  
+  <div class="skill-box">
+    <strong>Skill (B3.3.7): Joint Range of Motion</strong>
+    <p>Biologists, biomechanists, and physiotherapists utilize precise tools like <strong>goniometers</strong> or computer-assisted motion capture to quantify the angular range of motion of different joints. This allows for comparing the extensive multi-axial movement of the hip (a ball-and-socket joint, capable of flexion/extension, abduction/adduction, and rotation) against the restrictive uni-axial movement of the knee (primarily a hinge joint limited to flexion/extension).</p>
+  </div>
+  
+  <div class="kt"><strong>B3.3.9</strong> Evolutionary reasons for locomotion in animals.</div>
+  <p>Locomotion is incredibly metabolically expensive. Animals expend massive amounts of energy ($ATP$) to move against gravity, friction, and environmental resistance. Evolution dictates that the benefits of movement must radically outweigh the energetic costs. Primary reasons include: foraging for food, escaping active predators, locating suitable mates for reproduction, and dispersing to colonize new, optimal habitats.</p>
+  
+  <div class="app-box">
+    <strong>Application (B3.3.10): Marine Mammals</strong>
+    <p>Marine mammals (such as whales, dolphins, and seals) exhibit striking, convergent evolutionary adaptations for aquatic locomotion. This includes an extremely streamlined (fusiform) body shape to minimize water viscosity drag, forelimbs modified into highly efficient flippers, the loss of hind limbs (in cetaceans) to reduce drag, and powerful tail flukes for propulsion.</p>
+  </div>
+</div>
+
+<!-- SLIDE 7 — Check Your Understanding -->
+<div class="slide" id="slide-7">
+  <div class="section-tag hl-tag">Assessment <span class="hl-badge">Check Your Understanding</span></div>
+  <h2>Self-Assessment Questions</h2>
+  <p>Test your knowledge of B3.3 Muscle and Motility. Click the questions below to reveal the detailed answers.</p>
+
+  <details>
+    <summary>1. Describe the precise sequence of events during the sliding filament mechanism.</summary>
+    <p>When calcium ions are released, they bind to troponin, causing tropomyosin to shift and expose myosin-binding sites on the actin filament. Myosin heads, energized by ATP hydrolysis, bind to these sites forming cross-bridges. The myosin heads then execute a power stroke, pivoting and pulling the actin filaments toward the center of the sarcomere (M-line). ATP then binds to the myosin head, causing it to detach from actin, and the cycle repeats.</p>
+  </details>
+
+  <details>
+    <summary>2. Why are antagonistic muscle pairs absolutely necessary for animal locomotion?</summary>
+    <p>Muscle tissue is only capable of active contraction (pulling); it cannot actively lengthen (push). Therefore, to reverse a movement or return a limb to its original resting position, an opposing muscle must contract to pull the bone in the opposite direction while the original muscle relaxes. For example, the biceps flex the arm, while the antagonistic triceps extend it.</p>
+  </details>
+
+  <details>
+    <summary>3. Differentiate between ligaments and tendons in a synovial joint.</summary>
+    <p><strong>Ligaments</strong> are bands of tough, fibrous connective tissue that connect bone to bone. Their primary function is to stabilize the joint and prevent excessive or abnormal movements. <strong>Tendons</strong>, on the other hand, are cords of dense connective tissue that attach muscle to bone, serving to transmit the mechanical force of muscle contraction to the skeleton to initiate movement.</p>
+  </details>
+</div>
+
+
+<!-- SLIDE 8 — COMPLETION -->
+<div class="slide" id="slide-8">
+  <div class="completion">
+    <div class="check">✅</div>
+    <h1>B3.3 Muscle and Motility Complete!</h1>
+    <p>You have successfully reviewed all HL understandings for Biology Theme B3.3, including detailed biomechanics and ecological adaptations.</p>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+  <button class="nav-btn" id="btnPrev" onclick="goTo(-1)">◀ Prev</button>
+  <div class="nav-dots" id="dotsContainer"></div>
+  <div class="nav-counter" id="slideCounter">1 / 8</div>
+  <button class="nav-btn" id="btnNext" onclick="goTo(1)">Next ▶</button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const btnPrev = document.getElementById('btnPrev');
+  const btnNext = document.getElementById('btnNext');
+  const counter = document.getElementById('slideCounter');
+  const progressBar = document.getElementById('progressBar');
+  const dotsContainer = document.getElementById('dotsContainer');
+  
+  // Initialize dots
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'nav-dot';
+    // Mark HL dots
+    if(slide.querySelector('.hl-badge')) dot.classList.add('hl-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => jumpTo(i);
+    dotsContainer.appendChild(dot);
+  });
+  
+  const dots = document.querySelectorAll('.nav-dot');
+  
+  function updateNav() {
+    slides.forEach((s, i) => {
+      s.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+    
+    btnPrev.disabled = currentSlide === 0;
+    btnNext.disabled = currentSlide === totalSlides - 1;
+    counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+    progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  function goTo(dir) {
+    currentSlide += dir;
+    if (currentSlide < 0) currentSlide = 0;
+    if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+    updateNav();
+  }
+  
+  function jumpTo(index) {
+    currentSlide = index;
+    updateNav();
+  }
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' && currentSlide < totalSlides - 1) goTo(1);
+    if (e.key === 'ArrowLeft' && currentSlide > 0) goTo(-1);
+  });
+  
+  updateNav();
+</script>
+</body>
+</html>

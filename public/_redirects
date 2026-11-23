@@ -1,0 +1,20 @@
+# Legacy URL redirects (if migrating from old structure)
+# Format: /old-path /new-path 301
+
+# Old Bloome widget paths (if any)
+/widget/* /courses/:splat  301
+/ess/* /courses/ess/:splat  301
+/bio/* /courses/biology/:splat  301
+/biology/* /courses/biology/:splat  301
+
+# Old IA/EE paths
+/ia /ia-guide  301
+/ia/ess /ia-guide/ess  301
+/ia/bio /ia-guide/biology  301
+/ia/biology /ia-guide/biology  301
+/ee /ee-guide  301
+
+# Trailing slash normalization (Cloudflare Pages handles this automatically)
+# But explicit is safer:
+# /courses/ess/ /courses/ess  301
+# /courses/biology/ /courses/biology  301
