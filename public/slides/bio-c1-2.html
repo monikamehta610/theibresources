@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IB DP Biology C1.2 — Cell Respiration</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- MathJax for LaTeX math -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  :root{--blue:#0A6EBD;--blue-light:#E8F4FD;--blue-dark:#064A7A;--orange:#FF6B35;--orange-light:#FFF3ED;--green:#2E8B57;--green-light:#EAF7F0;--red:#C0392B;--red-light:#FDECEB;--yellow:#F0AD4E;--yellow-light:#FFF9E6;--gray-50:#FAFBFC;--gray-100:#F4F5F7;--gray-200:#E8EAED;--gray-400:#9AA0A6;--gray-600:#5F6368;--gray-800:#202124;--hl:#7B2D8E;--hl-light:#F5EAF8;--hl-border:#C9A0DC}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:'Sora',-apple-system,sans-serif;background:#fff;color:var(--gray-800);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .slide{display:none;min-height:100vh;padding:3rem 2rem 6rem;max-width:900px;margin:0 auto}.slide.active{display:block}
+  h1{font-size:2.4rem;font-weight:700;line-height:1.2;margin-bottom:.5rem}h2{font-size:1.65rem;font-weight:600;line-height:1.3;margin-bottom:1rem}h3{font-size:1.15rem;font-weight:600;margin-bottom:.5rem}
+  p{margin-bottom:.9rem;font-size:.95rem}strong{font-weight:600}
+  .section-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .7rem;border-radius:4px;margin-bottom:.8rem;background:var(--blue-light);color:var(--blue)}
+  .hl-badge{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;background:var(--hl);color:#fff;margin-left:.5rem;vertical-align:middle}
+  .kt{background:var(--gray-100);border-left:4px solid var(--blue);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1.2rem 0;font-size:.92rem}.kt strong{color:var(--blue);display:block;margin-bottom:.3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+  .card{background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:1.2rem 1.4rem;margin:1rem 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .tbl{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}.tbl th{background:var(--gray-100);font-weight:600;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--gray-200);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gray-600)}.tbl td{padding:.55rem .8rem;border-bottom:1px solid var(--gray-200);vertical-align:top}.tbl tr:last-child td{border-bottom:none}
+  .bullets{list-style:none;padding:0;margin:.8rem 0}.bullets li{position:relative;padding-left:1.4rem;margin-bottom:.5rem;font-size:.92rem}.bullets li::before{content:'';position:absolute;left:0;top:.55rem;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+  .tip{background:var(--orange-light);border-left:4px solid var(--orange);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1.2rem 0;font-size:.88rem}.tip strong{color:var(--orange)}
+  .case{background:var(--green-light);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1rem 0;font-size:.88rem}.case strong{color:var(--green)}
+  .skill-box { background: var(--hl-light); border-left: 4px solid var(--hl); padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; font-size: 0.92rem; }
+  .skill-box strong { color: var(--hl); display: block; margin-bottom: 0.3rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .app-box { background: var(--red-light); border-left: 4px solid var(--red); padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; font-size: 0.92rem; }
+  .app-box strong { color: var(--red); display: block; margin-bottom: 0.3rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  
+  .slide-img{width:100%;max-height: 500px; border-radius:10px;margin:1.5rem 0;box-shadow:0 4px 12px rgba(10, 110, 189, 0.15);object-fit:cover; background: #fff;}
+  .cover-img{width:100%;height:35vh;object-fit:cover;border-radius:16px;margin-bottom:2rem;box-shadow:0 4px 20px rgba(0,0,0,.15);object-position:center 40%}
+  
+  /* Image Grid */
+  .img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .img-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+  /* Flip Card */
+  .flip-card-container { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+  .flip-card { background-color: transparent; width: 250px; height: 150px; perspective: 1000px; cursor: pointer; flex: 1 1 200px; }
+  .flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+  .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+  .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; display: flex; align-items: center; justify-content: center; padding: 1rem; border-radius: 10px; }
+  .flip-card-front { background-color: var(--blue-light); color: var(--blue-dark); border: 2px solid var(--blue); font-weight: 600; font-size: 1.1rem; }
+  .flip-card-back { background-color: var(--blue); color: white; transform: rotateY(180deg); font-size: 0.9rem; }
+
+  /* Details & Summary */
+  details { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 8px; margin-bottom: 1rem; padding: 0.5rem 1rem; cursor: pointer; transition: background 0.3s ease; }
+  details:hover { background: var(--gray-100); }
+  summary { font-weight: 600; font-size: 1.05rem; color: var(--blue-dark); outline: none; padding: 0.5rem 0; }
+  details p { margin-top: 1rem; padding-left: 1rem; border-left: 3px solid var(--blue); color: var(--gray-800); }
+
+  /* CSS Flow Diagrams */
+  .css-flow { display: flex; flex-direction: column; gap: 0.5rem; margin: 1.5rem auto; align-items: center; max-width: 600px; }
+  .flow-step { background: var(--gray-50); border: 2px solid var(--blue); border-radius: 8px; padding: 1rem; width: 100%; text-align: center; font-weight: 500; color: var(--gray-800); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+  .flow-arrow { color: var(--blue); font-size: 1.5rem; font-weight: bold; line-height: 1; margin: 0.2rem 0; }
+  .flow-step.alt { border-color: var(--green); background: var(--green-light); color: var(--green); }
+  .flow-step.hl { border-color: var(--hl); background: var(--hl-light); color: var(--hl); }
+
+  .progress-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:var(--blue);z-index:1000;transition:width .3s ease}
+  .nav{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--gray-200);padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:999}
+  .nav-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border:1px solid var(--gray-200);border-radius:8px;background:#fff;color:var(--gray-800);font-family:inherit;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .15s}.nav-btn:hover{background:var(--gray-100);border-color:var(--gray-400)}.nav-btn:disabled{opacity:.3;cursor:default}
+  .nav-dots{display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:60%}.nav-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-200);border:none;cursor:pointer;padding:0;transition:all .2s}.nav-dot.active{background:var(--blue);width:20px;border-radius:4px}.nav-dot.hl-dot.active{background:var(--hl)}
+  .nav-counter{font-size:.72rem;color:var(--gray-400);white-space:nowrap;margin:0 .5rem}
+  .cover{display:flex;flex-direction:column;justify-content:center;min-height:90vh;text-align:center}.cover h1{font-size:2.6rem;margin-bottom:.3rem}.cover .subtitle{font-size:1.1rem;color:var(--gray-600);margin-bottom:2rem}.cover .stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}.cover .stat{text-align:center}.cover .stat-num{font-size:2rem;font-weight:700;color:var(--blue)}.cover .stat-label{font-size:.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.08em}
+  .completion{text-align:center;padding-top:4rem}.completion .check{font-size:4rem;margin-bottom:1rem}.completion h1{font-size:2rem;margin-bottom:.5rem}.completion .point-count{font-size:3rem;font-weight:700;color:var(--blue);margin:1rem 0}.completion .point-label{font-size:.85rem;color:var(--gray-600)}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1rem 0}.compare-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:1rem}.compare-card h4{font-size:.9rem;margin-bottom:.4rem}.compare-card p{font-size:.85rem;margin:0}.compare-card ul{font-size:.85rem;padding-left:1.2rem;margin:.4rem 0 0}
+  @media(max-width:640px){.slide{padding:2rem 1.2rem 6rem}h1{font-size:1.7rem}h2{font-size:1.3rem}.cover h1{font-size:1.9rem}.cover .stat-num{font-size:1.5rem}.compare-grid{grid-template-columns:1fr}.tbl{font-size:.8rem}.tbl th,.tbl td{padding:.45rem .5rem}.nav-dots{max-width:45%}.nav-dot{width:6px;height:6px}.nav-dot.active{width:14px}.cover-img{height:28vh}}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- SLIDE 0 — COVER -->
+<div class="slide active" id="slide-0">
+  <div class="cover">
+    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=900&q=80" alt="Mitochondria rendering" class="cover-img">
+    <div class="section-tag">IB DP Biology 2025: Interaction and Interdependence</div>
+    <h1>C1.2 — Cell Respiration</h1>
+    <p class="subtitle">Theme C: Energy and Matter · Standard & Higher Level</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">SL Understandings</div></div>
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">HL Extensions</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 1 — ATP -->
+<div class="slide" id="slide-1">
+  <div class="section-tag">C1.2.1</div>
+  <h2>ATP as the Energy Currency</h2>
+  <div class="kt"><strong>Key Understanding</strong>ATP is the molecule used by cells to supply immediate energy for cellular processes. It serves as the bridge between energy-yielding and energy-requiring reactions.</div>
+  
+  <p>Adenosine triphosphate (ATP) acts as the universal energy currency of the cell across all forms of life. It consists of three parts: adenine (a nitrogenous base), a ribose sugar (a five-carbon sugar), and a chain of three phosphate groups. The bonds connecting these phosphate groups hold significant potential energy.</p>
+  
+  <div class="flip-card-container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">ATP</div>
+        <div class="flip-card-back">Adenosine Triphosphate, the universal energy currency.</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Hydrolysis</div>
+        <div class="flip-card-back">The chemical breakdown of a compound due to reaction with water, used to break down ATP.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="css-flow">
+    <div class="flow-step">Energy released from the oxidation of organic molecules during cell respiration</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step alt">ADP + Pᵢ ➔ ATP (energy is chemically stored in the high-energy phosphate bond)</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">ATP is hydrolyzed back to ADP + Pᵢ, releasing energy exactly where cellular work is needed</div>
+  </div>
+  
+  <p>Because the covalent bond between the second and third phosphate groups is relatively unstable and easily broken by hydrolysis, it is perfectly suited for transferring energy quickly. The amount of energy released ($\Delta G$) during ATP hydrolysis under cellular conditions is typically around $-30.5 \text{ kJ/mol}$.</p>
+  
+  <div class="img-grid">
+    <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=500&q=80" alt="Energy transfer concept">
+    <img src="https://images.unsplash.com/photo-1614935151651-0bea6508abb0?w=500&q=80" alt="Molecular biology concept">
+  </div>
+  
+  <div class="app-box">
+    <strong>Application</strong>
+    <p>ATP is utilized for various fundamental energy-requiring processes within the body. These include active transport (e.g., sodium-potassium pumps across membranes), mechanical work (e.g., muscle contraction and movement of cilia), and chemical work (e.g., synthesizing macromolecules such as DNA replication and protein synthesis).</p>
+  </div>
+</div>
+
+<!-- SLIDE 2 — Cell Respiration Overview -->
+<div class="slide" id="slide-2">
+  <div class="section-tag">C1.2.2</div>
+  <h2>Controlled Release of Energy</h2>
+  <div class="kt"><strong>Key Understanding</strong>Cell respiration is the controlled release of energy from organic compounds to produce ATP in a stepwise manner.</div>
+  
+  <p>Glucose is the primary substrate for respiration, but under different metabolic states, lipids (fatty acids) and proteins (amino acids) can also be used. The breakdown of these complex organic molecules must be highly controlled. If a molecule of glucose were oxidized in one big step, a massive amount of energy would be lost as heat, potentially damaging the cell and wasting usable energy.</p>
+  
+  <div class="skill-box">
+    <strong>Skill</strong>
+    <p>Calculating the respiratory quotient (RQ) from the volume of carbon dioxide produced and the volume of oxygen consumed during respiration. By calculating the RQ, you can determine which substrate is primarily being respired. $\text{RQ} = \frac{\text{CO}_2 \text{ produced}}{\text{O}_2 \text{ consumed}}$. An RQ of 1.0 indicates carbohydrates, ~0.7 indicates lipids, and ~0.9 indicates proteins.</p>
+  </div>
+
+  <p>To avoid this rapid heat loss, cells break down glucose in a series of tightly regulated, small, enzyme-catalyzed steps. Each step has a low activation energy barrier, allowing the cell to efficiently capture energy to form ATP molecules.</p>
+</div>
+
+<!-- SLIDE 3 — Anaerobic Respiration -->
+<div class="slide" id="slide-3">
+  <div class="section-tag">C1.2.3</div>
+  <h2>Anaerobic Respiration</h2>
+  <div class="kt"><strong>Key Understanding</strong>Anaerobic cell respiration yields a small amount of ATP from glucose without requiring oxygen. It is vital for rapid energy production or survival in anoxic environments.</div>
+  
+  <p>When oxygen is not available, or when short bursts of rapid energy are required, cells can still produce ATP. This is achieved solely through glycolysis in the cytoplasm, producing a net yield of 2 ATP per glucose molecule. Without oxygen to act as the final electron acceptor, the cell must regenerate NAD⁺ by reducing pyruvate, leading to different fermentation products.</p>
+  
+  <div class="flip-card-container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Glycolysis</div>
+        <div class="flip-card-back">The breakdown of glucose by enzymes, releasing energy and pyruvic acid.</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Fermentation</div>
+        <div class="flip-card-back">Metabolic process that produces chemical changes in organic substrates without oxygen.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-card">
+      <h4 style="color:var(--blue)">In Humans (Animals)</h4>
+      <p>Glucose is converted into lactic acid (lactate).</p>
+      <ul>
+        <li>Extremely useful during intense exercise (e.g., weightlifting, sprinting) when the oxygen supply is insufficient to meet the energy demands of muscle tissues.</li>
+        <li>Reaction: $\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2 \text{ Lactic Acid}$</li>
+        <li>Lactic acid accumulation can lower cellular pH and cause muscle fatigue.</li>
+      </ul>
+    </div>
+    <div class="compare-card">
+      <h4 style="color:var(--orange)">In Yeast (Fungi/Plants)</h4>
+      <p>Glucose is converted into ethanol and carbon dioxide.</p>
+      <ul>
+        <li>Forms the biological basis for baking (where CO₂ gets trapped in dough, making bread rise) and the brewing industry.</li>
+        <li>Reaction: $\text{C}_6\text{H}_{12}\text{O}_6 \rightarrow 2 \text{ Ethanol} + 2 \text{CO}_2$</li>
+        <li>Ethanol is toxic in high concentrations, eventually killing the yeast.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4 — Aerobic Respiration -->
+<div class="slide" id="slide-4">
+  <div class="section-tag">C1.2.4</div>
+  <h2>Aerobic Respiration</h2>
+  <div class="kt"><strong>Key Understanding</strong>Aerobic cell respiration requires oxygen and gives a very large yield of ATP from glucose.</div>
+  
+  <p>Unlike anaerobic respiration, aerobic respiration completely oxidizes a molecule of glucose into carbon dioxide and water. Because the bonds in glucose are fully broken down, a much larger amount of energy is released. This process typically yields about 30-32 ATP molecules per glucose molecule, making it vastly more efficient.</p>
+  
+  <div class="card" style="text-align:center; font-size:1.2rem;">
+    <strong>C₆H₁₂O₆ + 6O₂ ➔ 6CO₂ + 6H₂O + Energy (ATP)</strong>
+  </div>
+  
+  <ul class="bullets">
+    <li>The process begins in the cytoplasm (glycolysis) but is primarily completed within the <strong>mitochondria</strong>.</li>
+    <li>Mitochondria are perfectly adapted organelles. They have a double membrane structure. The inner membrane is highly folded into cristae to maximize surface area for the electron transport chain.</li>
+    <li>The inner fluid, called the matrix, contains all the necessary enzymes for the Krebs cycle and link reaction.</li>
+  </ul>
+  
+  <div class="img-grid">
+    <img src="https://images.unsplash.com/photo-1583912265927-8c56bf36cb87?w=500&q=80" alt="Aerobic exercise">
+    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=80" alt="Microscopic cells">
+  </div>
+</div>
+
+<!-- SLIDE 5 — HL: Redox & Glycolysis -->
+<div class="slide" id="slide-5">
+  <div class="section-tag hl-tag">C1.2.5 / C1.2.6 <span class="hl-badge">HL Only</span></div>
+  <h2>Redox Reactions & Glycolysis</h2>
+  <div class="kt"><strong>Key Understanding (HL)</strong> Cell respiration heavily involves the oxidation and reduction of electron carriers. The phosphorylation of molecules makes them less stable and more reactive.</div>
+  
+  <p>In biological systems, <strong>oxidation</strong> is strictly defined as the loss of electrons (or the loss of hydrogen atoms), and <strong>reduction</strong> is the gain of electrons (or the gain of hydrogen atoms). A helpful acronym is OIL RIG (Oxidation Is Loss, Reduction Is Gain). The primary electron carrier in cellular respiration is NAD⁺, which becomes reduced to form NADH + H⁺. Another carrier, FAD, becomes FADH₂.</p>
+  
+  <div class="css-flow">
+    <div class="flow-step hl"><strong>1. Phosphorylation (Cytoplasm):</strong> Glucose is phosphorylated using 2 ATP molecules to form hexose bisphosphate. This addition of phosphate groups makes the molecule less stable.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step hl"><strong>2. Lysis & Oxidation:</strong> The unstable 6-carbon sugar splits into two 3-carbon compounds (triose phosphate). These are oxidized to form two pyruvate molecules, reducing NAD⁺ to NADH.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step hl"><strong>3. Link Reaction (Mitochondrial Matrix):</strong> Pyruvate enters the matrix. It is decarboxylated (loses one carbon as CO₂) and oxidized (forms another NADH). The remaining 2-carbon acetyl group binds to Coenzyme A to form Acetyl-CoA.</div>
+  </div>
+</div>
+
+<!-- SLIDE 6 — HL: Krebs Cycle -->
+<div class="slide" id="slide-6">
+  <div class="section-tag hl-tag">C1.2.7 <span class="hl-badge">HL Only</span></div>
+  <h2>The Krebs Cycle</h2>
+  <div class="kt"><strong>Key Understanding (HL)</strong> In the Krebs cycle, the ongoing oxidation of acetyl groups is strictly coupled to the reduction of hydrogen carriers.</div>
+  
+  <p>The Krebs cycle (also known as the citric acid cycle) takes place in the mitochondrial matrix. Acetyl-CoA (a 2-carbon molecule) delivers its acetyl group to combine with oxaloacetate (a 4-carbon compound). This forms citrate (a 6-carbon compound). Through a tightly regulated sequence of oxidative decarboxylations, the original 4-carbon oxaloacetate is regenerated, allowing the cycle to repeat.</p>
+  
+  <div class="card">
+    <strong style="color:var(--hl)">Krebs Cycle Yield (per single Acetyl-CoA):</strong>
+    <p>Since each glucose molecule produces two pyruvates, the cycle turns twice per glucose.</p>
+    <ul class="bullets">
+      <li>2 molecules of CO₂ (released as a waste product)</li>
+      <li>3 molecules of NADH + H⁺ and 1 molecule of FADH₂ (these reduced electron carriers hold the bulk of the extracted energy)</li>
+      <li>1 molecule of ATP (generated directly via substrate-level phosphorylation)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 7 — HL: ETC & Chemiosmosis -->
+<div class="slide" id="slide-7">
+  <div class="section-tag hl-tag">C1.2.8 <span class="hl-badge">HL Only</span></div>
+  <h2>ETC and Chemiosmosis</h2>
+  <div class="kt"><strong>Key Understanding (HL)</strong> The substantial energy released by oxidation reactions is carried to the cristae of the mitochondria and used to pump protons, driving ATP synthesis.</div>
+  
+  <p>Oxidative phosphorylation represents the final and most productive stage of cellular respiration. It consists of the Electron Transport Chain (ETC) and chemiosmosis.</p>
+  
+  <ul class="bullets">
+    <li><strong>Electron Transport:</strong> Reduced carriers (NADH and FADH₂) arrive at the inner mitochondrial membrane and donate their high-energy electrons to the ETC.</li>
+    <li><strong>Proton Pumping:</strong> As the electrons are passed down energy levels through a series of protein complexes (Complex I, III, and IV), the released energy is used to actively pump H⁺ ions (protons) from the matrix into the narrow intermembrane space. This creates a powerful electrochemical gradient.</li>
+    <li><strong>Chemiosmosis:</strong> Protons rapidly diffuse back into the matrix down their concentration gradient through an enzyme called ATP synthase. The kinetic energy of this proton flow causes the enzyme to rotate, providing the energy necessary to phosphorylate ADP into ATP.</li>
+    <li><strong>The Final Acceptor:</strong> Oxygen acts as the final and ultimate electron acceptor. It pulls the electrons down the chain due to its high electronegativity. It combines with these electrons and free protons to form water ($\text{H}_2\text{O}$). Without oxygen, the entire chain halts, backing up the whole aerobic process.</li>
+  </ul>
+</div>
+
+<!-- SLIDE 8 — Check Your Understanding -->
+<div class="slide" id="slide-8">
+  <div class="section-tag">Review</div>
+  <h2>Check Your Understanding</h2>
+  <div class="kt"><strong>Self-Assessment</strong> Test your knowledge on the core concepts of Cell Respiration before moving forward.</div>
+  
+  <details>
+    <summary>Why is ATP described as the universal energy currency?</summary>
+    <p>Because it is used by virtually all living organisms to transfer energy within the cell, providing a readily accessible and immediate supply of energy for diverse cellular functions like active transport and muscle contraction.</p>
+  </details>
+  <details>
+    <summary>What is the primary difference in the end products of anaerobic respiration between humans and yeast?</summary>
+    <p>In humans (and animals), anaerobic respiration produces lactic acid. In yeast (and plants), it produces ethanol and carbon dioxide. Both processes yield 2 ATP per glucose molecule.</p>
+  </details>
+  <details>
+    <summary>What role does Oxygen play in the electron transport chain? (HL/SL)</summary>
+    <p>Oxygen is the final electron acceptor at the end of the electron transport chain. It possesses a high electronegativity, drawing electrons down the chain. Upon receiving electrons and protons, it forms water, preventing the chain from backing up.</p>
+  </details>
+  <details>
+    <summary>Where specifically do glycolysis, the Krebs cycle, and the ETC take place within a cell?</summary>
+    <p>Glycolysis occurs in the cytoplasm. The Krebs cycle takes place within the mitochondrial matrix. The Electron Transport Chain is embedded in the inner mitochondrial membrane (the cristae).</p>
+  </details>
+</div>
+
+<!-- SLIDE 9 — COMPLETION -->
+<div class="slide" id="slide-9">
+  <div class="completion">
+    <div class="check">✅</div>
+    <h1>C1.2 Cell Respiration Complete!</h1>
+    <p>You have successfully reviewed all SL and HL understandings for Biology Theme C1.2.</p>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+  <button class="nav-btn" id="btnPrev" onclick="goTo(-1)">◀ Prev</button>
+  <div class="nav-dots" id="dotsContainer"></div>
+  <div class="nav-counter" id="slideCounter">1 / 10</div>
+  <button class="nav-btn" id="btnNext" onclick="goTo(1)">Next ▶</button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const btnPrev = document.getElementById('btnPrev');
+  const btnNext = document.getElementById('btnNext');
+  const counter = document.getElementById('slideCounter');
+  const progressBar = document.getElementById('progressBar');
+  const dotsContainer = document.getElementById('dotsContainer');
+  
+  // Initialize dots
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'nav-dot';
+    // Mark HL dots
+    if(slide.querySelector('.hl-badge')) dot.classList.add('hl-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => jumpTo(i);
+    dotsContainer.appendChild(dot);
+  });
+  
+  const dots = document.querySelectorAll('.nav-dot');
+  
+  function updateNav() {
+    slides.forEach((s, i) => {
+      s.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+    
+    btnPrev.disabled = currentSlide === 0;
+    btnNext.disabled = currentSlide === totalSlides - 1;
+    counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+    progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  function goTo(dir) {
+    currentSlide += dir;
+    if (currentSlide < 0) currentSlide = 0;
+    if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+    updateNav();
+  }
+  
+  function jumpTo(index) {
+    currentSlide = index;
+    updateNav();
+  }
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' && currentSlide < totalSlides - 1) goTo(1);
+    if (e.key === 'ArrowLeft' && currentSlide > 0) goTo(-1);
+  });
+  
+  updateNav();
+</script>
+</body>
+</html>

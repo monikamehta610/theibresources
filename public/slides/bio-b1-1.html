@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IB DP Biology B1.1 — Carbohydrates & Lipids</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Load MathJax for LaTeX support -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  :root{--blue:#0A6EBD;--blue-light:#E8F4FD;--blue-dark:#064A7A;--orange:#FF6B35;--orange-light:#FFF3ED;--green:#2E8B57;--green-light:#EAF7F0;--red:#C0392B;--red-light:#FDECEB;--yellow:#F0AD4E;--yellow-light:#FFF9E6;--gray-50:#FAFBFC;--gray-100:#F4F5F7;--gray-200:#E8EAED;--gray-400:#9AA0A6;--gray-600:#5F6368;--gray-800:#202124;--hl:#7B2D8E;--hl-light:#F5EAF8;--hl-border:#C9A0DC}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:'Sora',-apple-system,sans-serif;background:#fff;color:var(--gray-800);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .slide{display:none;min-height:100vh;padding:3rem 2rem 6rem;max-width:900px;margin:0 auto}.slide.active{display:block}
+  h1{font-size:2.4rem;font-weight:700;line-height:1.2;margin-bottom:.5rem}h2{font-size:1.65rem;font-weight:600;line-height:1.3;margin-bottom:1rem}h3{font-size:1.15rem;font-weight:600;margin-bottom:.5rem}
+  p{margin-bottom:.9rem;font-size:.95rem}strong{font-weight:600}
+  .section-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .7rem;border-radius:4px;margin-bottom:.8rem;background:var(--blue-light);color:var(--blue)}
+  .hl-badge{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;background:var(--hl);color:#fff;margin-left:.5rem;vertical-align:middle}
+  .kt{background:var(--gray-100);border-left:4px solid var(--blue);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1.2rem 0;font-size:.92rem}.kt strong{color:var(--blue);display:block;margin-bottom:.3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+  .card{background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:1.2rem 1.4rem;margin:1rem 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .tbl{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}.tbl th{background:var(--gray-100);font-weight:600;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--gray-200);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gray-600)}.tbl td{padding:.55rem .8rem;border-bottom:1px solid var(--gray-200);vertical-align:top}.tbl tr:last-child td{border-bottom:none}
+  .bullets{list-style:none;padding:0;margin:.8rem 0}.bullets li{position:relative;padding-left:1.4rem;margin-bottom:.5rem;font-size:.92rem}.bullets li::before{content:'';position:absolute;left:0;top:.55rem;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+  .tip{background:var(--orange-light);border-left:4px solid var(--orange);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1.2rem 0;font-size:.88rem}.tip strong{color:var(--orange)}
+  .case{background:var(--green-light);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1rem 0;font-size:.88rem}.case strong{color:var(--green)}
+  
+  /* Skills & Applications Boxes */
+  .skill-box { background: var(--hl-light); border-left: 4px solid var(--hl); border-radius: 0 8px 8px 0; padding: 0.9rem 1.2rem; margin: 1.2rem 0; font-size: 0.88rem; }
+  .skill-box strong { color: var(--hl); display:block; margin-bottom: 0.3rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .app-box { background: var(--blue-light); border-left: 4px solid var(--blue); border-radius: 0 8px 8px 0; padding: 0.9rem 1.2rem; margin: 1.2rem 0; font-size: 0.88rem; }
+  .app-box strong { color: var(--blue); display:block; margin-bottom: 0.3rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .slide-img{width:100%;max-height: 500px; border-radius:10px;margin:1.5rem 0;box-shadow:0 4px 12px rgba(10, 110, 189, 0.15);object-fit:contain; background: #fff;}
+  .cover-img{width:100%;height:35vh;object-fit:cover;border-radius:16px;margin-bottom:2rem;box-shadow:0 4px 20px rgba(0,0,0,.15);object-position:center 40%}
+  
+  /* CSS Flow Diagrams */
+  .css-flow { display: flex; flex-direction: column; gap: 0.5rem; margin: 1.5rem auto; align-items: center; max-width: 600px; }
+  .flow-step { background: var(--gray-50); border: 2px solid var(--blue); border-radius: 8px; padding: 1rem; width: 100%; text-align: center; font-weight: 500; color: var(--gray-800); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+  .flow-arrow { color: var(--blue); font-size: 1.5rem; font-weight: bold; line-height: 1; margin: 0.2rem 0; }
+  .flow-step.alt { border-color: var(--green); background: var(--green-light); color: var(--green); }
+  .flow-step.hl { border-color: var(--hl); background: var(--hl-light); color: var(--hl); }
+
+  .progress-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:var(--blue);z-index:1000;transition:width .3s ease}
+  .nav{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--gray-200);padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:999}
+  .nav-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border:1px solid var(--gray-200);border-radius:8px;background:#fff;color:var(--gray-800);font-family:inherit;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .15s}.nav-btn:hover{background:var(--gray-100);border-color:var(--gray-400)}.nav-btn:disabled{opacity:.3;cursor:default}
+  .nav-dots{display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:60%}.nav-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-200);border:none;cursor:pointer;padding:0;transition:all .2s}.nav-dot.active{background:var(--blue);width:20px;border-radius:4px}.nav-dot.hl-dot.active{background:var(--hl)}
+  .nav-counter{font-size:.72rem;color:var(--gray-400);white-space:nowrap;margin:0 .5rem}
+  .cover{display:flex;flex-direction:column;justify-content:center;min-height:90vh;text-align:center}.cover h1{font-size:2.6rem;margin-bottom:.3rem}.cover .subtitle{font-size:1.1rem;color:var(--gray-600);margin-bottom:2rem}.cover .stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}.cover .stat{text-align:center}.cover .stat-num{font-size:2rem;font-weight:700;color:var(--blue)}.cover .stat-label{font-size:.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.08em}
+  .completion{text-align:center;padding-top:4rem}.completion .check{font-size:4rem;margin-bottom:1rem}.completion h1{font-size:2rem;margin-bottom:.5rem}.completion .point-count{font-size:3rem;font-weight:700;color:var(--blue);margin:1rem 0}.completion .point-label{font-size:.85rem;color:var(--gray-600)}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1rem 0}.compare-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:1rem}.compare-card h4{font-size:.9rem;margin-bottom:.4rem}.compare-card p{font-size:.85rem;margin:0}.compare-card ul{font-size:.85rem;padding-left:1.2rem;margin:.4rem 0 0}
+  
+  /* Interactive Elements Additions */
+  .flip-card { background-color: transparent; width: 100%; height: 160px; perspective: 1000px; margin: 1.5rem 0; cursor: pointer; }
+  .flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px; }
+  .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+  .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem; }
+  .flip-card-front { background-color: var(--blue-light); color: var(--blue); border: 2px solid var(--blue); }
+  .flip-card-front h3 { margin: 0; font-size: 1.4rem; }
+  .flip-card-front p { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--blue-dark); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+  .flip-card-back { background-color: var(--blue); color: white; transform: rotateY(180deg); font-size: 0.95rem; line-height: 1.5; }
+  
+  .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .image-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  
+  details { background-color: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 8px; margin: 1rem 0; padding: 0.5rem 1rem; }
+  summary { font-weight: 600; cursor: pointer; color: var(--blue-dark); padding: 0.5rem 0; outline: none; font-size: 1.05rem; }
+  details[open] summary { border-bottom: 1px solid var(--gray-200); margin-bottom: 0.8rem; padding-bottom: 0.8rem; }
+  details p { padding-top: 0.5rem; font-size: 0.95rem; }
+
+  @media(max-width:640px){.slide{padding:2rem 1.2rem 6rem}h1{font-size:1.7rem}h2{font-size:1.3rem}.cover h1{font-size:1.9rem}.cover .stat-num{font-size:1.5rem}.compare-grid{grid-template-columns:1fr}.tbl{font-size:.8rem}.tbl th,.tbl td{padding:.45rem .5rem}.nav-dots{max-width:45%}.nav-dot{width:6px;height:6px}.nav-dot.active{width:14px}.cover-img{height:28vh} .image-grid { grid-template-columns: 1fr; }}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- SLIDE 0 — COVER -->
+<div class="slide active" id="slide-0">
+  <div class="cover">
+    <img src="https://images.unsplash.com/photo-1549420078-43d939e6a0d2?w=900&q=80" alt="Molecular structure representation" class="cover-img">
+    <div class="section-tag">IB DP Biology 2025: Unity and Diversity</div>
+    <h1>B1.1 — Carbohydrates & Lipids</h1>
+    <p class="subtitle">Theme B: Form and Function · Standard & Higher Level</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">13</div><div class="stat-label">Understandings</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Skills/Apps</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 1 — B1.1.1 & B1.1.2 -->
+<div class="slide" id="slide-1">
+  <div class="section-tag">B1.1.1 / B1.1.2</div>
+  <h2>Carbon and Condensation Reactions</h2>
+  <div class="kt"><strong>Key Understanding</strong> Carbon atoms can form four stable covalent bonds, allowing for the formation of diverse macromolecules. These are built via condensation reactions.</div>
+  
+  <p>Carbon is arguably the most vital element to life because of its unique chemical properties. With four valence electrons, carbon can form up to four incredibly stable covalent bonds. It can bond with other carbon atoms to form long chains or rings, and with other elements like hydrogen, oxygen, nitrogen, and phosphorus to create complex, branched macromolecules crucial for life.</p>
+  
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1614935151651-0bea6508abb0?w=600&q=80" alt="Chemical structure representing bonds">
+    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80" alt="Biological networks">
+  </div>
+  
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Condensation Reaction</h3>
+        <p>Hover to reveal definition</p>
+      </div>
+      <div class="flip-card-back">
+        An anabolic reaction where two molecules are joined together to form a larger, more complex molecule, with the loss of water (H₂O). An -OH group from one molecule and an -H from another are removed to form the water byproduct.
+      </div>
+    </div>
+  </div>
+
+  <div class="css-flow">
+    <div class="flow-step"><strong>Monomers</strong>: Single subunits (e.g., monosaccharides)</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step alt"><strong>Condensation Reaction</strong>: Enzymes link monomers together</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><strong>Polymer</strong> + H₂O is released</div>
+  </div>
+  
+  <div class="app-box">
+    <strong>Application</strong>
+    Condensation reactions are anabolic (build up complex molecules). A water molecule (H₂O) is always a byproduct when two monomers join. For instance, linking two glucose molecules produces maltose and one water molecule.
+  </div>
+</div>
+
+<!-- SLIDE 2 — B1.1.3 -->
+<div class="slide" id="slide-2">
+  <div class="section-tag">B1.1.3</div>
+  <h2>Hydrolysis: Breaking Down Polymers</h2>
+  <div class="kt"><strong>Key Understanding</strong> Digestion of polymers into monomers occurs via hydrolysis reactions.</div>
+  
+  <p>When organisms consume complex food materials, the large macromolecules (polymers like starch, proteins, and triglycerides) are too large to pass through cell membranes. They must be broken down into their constituent monomers to be absorbed into the bloodstream and used by cells. This crucial physiological process is called <strong>hydrolysis</strong> (from the Greek <em>hydro</em> meaning water, and <em>lysis</em> meaning to unbind or break).</p>
+  
+  <ul class="bullets">
+    <li>Requires the <strong>addition of a water molecule (H₂O)</strong> to break the covalent bonds holding the polymer together. The water splits into -H and -OH, which attach to the newly separated monomers.</li>
+    <li>It is highly regulated and catalyzed by specific digestive enzymes. For example, amylase breaks down starch, proteases break down proteins, and lipases break down lipids.</li>
+    <li>This is a <strong>catabolic</strong> reaction, meaning it breaks down complex molecules into simpler ones, often releasing energy in the process.</li>
+  </ul>
+  
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Hydrolysis</h3>
+        <p>Hover to reveal definition</p>
+      </div>
+      <div class="flip-card-back">
+        A catabolic chemical reaction in which a molecule of water is added to a substance to break a covalent bond, splitting a polymer into simpler monomers.
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <strong>Skill: Drawing Reactions</strong>
+    You must be able to identify and draw simplified structural models of condensation and hydrolysis reactions. Ensure you clearly indicate where the hydrogen (H) and hydroxyl (OH) groups are removed during condensation, or where they are added from water during hydrolysis.
+  </div>
+</div>
+
+<!-- SLIDE 3 — B1.1.4 & B1.1.5 -->
+<div class="slide" id="slide-3">
+  <div class="section-tag">B1.1.4 / B1.1.5</div>
+  <h2>Carbohydrates: Energy and Structure</h2>
+  
+  <p>Carbohydrates are organic compounds consisting of carbon, hydrogen, and oxygen, typically with a hydrogen:oxygen atom ratio of 2:1 (as in water). They are fundamentally crucial for energy transfer and structural support in living organisms.</p>
+
+  <div class="compare-grid">
+    <div class="compare-card">
+      <h4 style="color:var(--blue)">Monosaccharides (B1.1.4)</h4>
+      <p>The simplest form of carbohydrates, consisting of single sugar units. They serve as an immediate, rapidly mobilized energy source for cellular respiration.</p>
+      <ul>
+        <li><strong>Key Examples:</strong> Glucose (C₆H₁₂O₆), Fructose, Galactose (hexose sugars) and Ribose/Deoxyribose (pentose sugars).</li>
+        <li>They are highly soluble in water due to their polar hydroxyl (-OH) groups, allowing easy transport in blood and plant sap.</li>
+      </ul>
+    </div>
+    <div class="compare-card">
+      <h4 style="color:var(--orange)">Polysaccharides (B1.1.5)</h4>
+      <p>Complex carbohydrates consisting of long chains of monosaccharides linked by glycosidic bonds. Primarily used for medium-term energy storage or structural roles.</p>
+      <ul>
+        <li><strong>Starch:</strong> Energy storage in plants. Exists in two forms: amylose (helical, unbranched) and amylopectin (branched).</li>
+        <li><strong>Glycogen:</strong> Energy storage in animals. Found in liver and muscle cells; it is highly branched for rapid mobilization of glucose.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1596484552993-9c8491c7820a?w=600&q=80" alt="Bread and grains representing carbs">
+    <img src="https://images.unsplash.com/photo-1581404172551-71701a52b86c?w=600&q=80" alt="Microscope view">
+  </div>
+
+  <div class="tip"><strong>Osmotic Balance:</strong> By storing glucose molecules clustered together as large, insoluble polysaccharides like glycogen and starch, cells prevent drastic changes in osmolarity. If all that glucose was free-floating, it would draw massive amounts of water into the cell via osmosis, causing it to swell and potentially burst.</div>
+</div>
+
+<!-- SLIDE 4 — B1.1.6 & B1.1.7 -->
+<div class="slide" id="slide-4">
+  <div class="section-tag">B1.1.6 / B1.1.7</div>
+  <h2>Structural Carbohydrates & Glycoproteins</h2>
+  
+  <h3>Cellulose in Plants (B1.1.6)</h3>
+  <p>Cellulose is a massive structural polysaccharide exclusively found in plant cell walls. It is composed entirely of $\beta$-glucose monomers linked by 1,4 glycosidic bonds. Because the hydroxyl groups on carbon 1 and carbon 4 point in opposite directions in $\beta$-glucose, every alternating monomer must be inverted 180° to form the bond. This inversion results in a straight, unbranched, and incredibly strong chain.</p>
+  <ul class="bullets">
+    <li>These straight chains run parallel to each other and are cross-linked by hydrogen bonds to form rigid structural units called <strong>microfibrils</strong>.</li>
+    <li>These microfibrils provide immense tensile strength to plant cell walls, ensuring the cell can withstand extremely high internal water pressure (turgor pressure) without lysing.</li>
+  </ul>
+
+  <h3>Glycoproteins in Cell Recognition (B1.1.7)</h3>
+  <p>Carbohydrates don't just exist independently; they often conjugate with proteins to form glycoproteins. These molecules are typically embedded in the plasma membrane with the carbohydrate chain protruding into the extracellular space.</p>
+  <ul class="bullets">
+    <li><strong>Cell-Cell Recognition:</strong> The unique carbohydrate shapes act as biochemical 'ID tags', allowing the immune system to accurately differentiate between "self" cells and "non-self" pathogens. For example, ABO blood groups are determined by glycoproteins on red blood cells.</li>
+    <li><strong>Receptors:</strong> They provide specific binding sites for hormones, neurotransmitters, and other extracellular signalling molecules.</li>
+  </ul>
+</div>
+
+<!-- SLIDE 5 — B1.1.8 & B1.1.9 -->
+<div class="slide" id="slide-5">
+  <div class="section-tag">B1.1.8 / B1.1.9</div>
+  <h2>Lipids: Hydrophobic Molecules</h2>
+  <div class="kt"><strong>Key Understanding</strong> Lipids are a diverse group of carbon compounds characterized primarily by their insolubility in water. The most common forms, triglycerides and phospholipids, are synthesized via condensation reactions.</div>
+  
+  <p>Unlike carbohydrates which are largely hydrophilic, lipids are non-polar and hydrophobic (water-fearing). This distinct chemical property makes them suitable for unique biological roles. The lipid family includes triglycerides (fats and oils), waxes, steroids, and phospholipids.</p>
+
+  <div class="css-flow">
+    <div class="flow-step">1 Glycerol molecule + 3 Fatty Acid chains</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step alt">Condensation Reaction (esterification, releases 3 H₂O)</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step"><strong>Triglyceride</strong> (Fat/Oil)</div>
+  </div>
+  
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Ester Bond</h3>
+        <p>Hover to reveal definition</p>
+      </div>
+      <div class="flip-card-back">
+        The type of covalent bond formed during the condensation of a fatty acid and glycerol. It links the hydroxyl (-OH) group of glycerol with the carboxyl (-COOH) group of the fatty acid.
+      </div>
+    </div>
+  </div>
+
+  <div class="tip"><strong>Note:</strong> A phospholipid is remarkably similar to a triglyceride, but one of the three fatty acid tails is replaced by a highly polar, hydrophilic phosphate group. This dual-nature (amphipathic) completely alters its chemical behavior, allowing membrane formation.</div>
+</div>
+
+<!-- SLIDE 6 — B1.1.10 -->
+<div class="slide" id="slide-6">
+  <div class="section-tag">B1.1.10</div>
+  <h2>Types of Fatty Acids</h2>
+  
+  <p>Fatty acids are long hydrocarbon chains with a carboxyl group (-COOH) at one end. They differ in length and, crucially, in the degree of hydrogen saturation along the chain.</p>
+
+  <table class="tbl">
+    <tr><th>Type</th><th>Structural Characteristics</th><th>Properties at Room Temperature</th></tr>
+    <tr>
+      <td><strong>Saturated</strong></td>
+      <td>Contain no double bonds between carbon atoms in the chain. The carbons are "saturated" with the maximum possible number of hydrogen atoms, resulting in a straight, linear shape.</td>
+      <td>Solid (e.g., butter, lard, animal fat). Their straight shape allows them to pack tightly together, increasing intermolecular forces and melting point.</td>
+    </tr>
+    <tr>
+      <td><strong>Monounsaturated</strong></td>
+      <td>Contain exactly one carbon-carbon double bond (C=C). This double bond usually occurs in the 'cis' configuration, causing a distinct 120° "kink" or bend in the hydrocarbon chain.</td>
+      <td>Liquid (e.g., olive oil). The kinks prevent tight packing, lowering the melting point.</td>
+    </tr>
+    <tr>
+      <td><strong>Polyunsaturated</strong></td>
+      <td>Contain two or more double bonds (C=C), resulting in multiple kinks along the chain.</td>
+      <td>Liquid (e.g., sunflower oil, fish oil). Extremely difficult to pack tightly.</td>
+    </tr>
+  </table>
+
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80" alt="Olive oil - unsaturated fat">
+    <img src="https://images.unsplash.com/photo-1589134712411-eec7307cc144?w=600&q=80" alt="Butter - saturated fat">
+  </div>
+
+  <div class="skill-box">
+    <strong>Skill: Molecular Identification</strong>
+    You must be able to visually identify saturated, monounsaturated, and polyunsaturated fatty acids from 2D molecular diagrams by counting the number of double carbon bonds. Furthermore, distinguishing between cis (hydrogens on same side of double bond) and trans (hydrogens on opposite sides) isomers is a critical IB expectation.
+  </div>
+</div>
+
+<!-- SLIDE 7 — B1.1.11 -->
+<div class="slide" id="slide-7">
+  <div class="section-tag">B1.1.11</div>
+  <h2>Energy Storage: Lipids vs Carbohydrates</h2>
+  <div class="kt"><strong>Key Understanding</strong> Triglycerides in adipose tissue act as optimal long-term energy storage and thermal insulation in animals.</div>
+  
+  <p>Animals utilize both carbohydrates (glycogen) and lipids (triglycerides) for energy storage, but they serve different physiological purposes. Triglycerides are stored in specialized cells called <strong>adipose tissue</strong>. Why are lipids preferred for long-term storage, while glycogen is used for short-term?</p>
+  
+  <ul class="bullets">
+    <li><strong>Energy Density:</strong> Lipids are far more energy-dense. The cellular respiration of lipids yields roughly twice the amount of ATP per gram ($\sim 38 \text{ kJ/g}$) compared to the breakdown of carbohydrates ($\sim 17 \text{ kJ/g}$).</li>
+    <li><strong>Storage Weight (Mass):</strong> Lipids are hydrophobic, so they are stored pure (without associated water). Carbohydrates are hydrophilic and associate with approximately 2 grams of water for every gram of glycogen. Storing energy as lipid is therefore drastically lighter—a critical evolutionary advantage for mobile animals and flying birds.</li>
+    <li><strong>Thermal Insulation:</strong> Subcutaneous adipose tissue is a poor conductor of heat, acting as a highly effective thermal insulator against heat loss in cold environments (e.g., blubber in whales and seals).</li>
+    <li><strong>Shock Absorption:</strong> Fat layers provide a cushioning effect, protecting delicate vital organs (like kidneys) from physical trauma.</li>
+  </ul>
+</div>
+
+<!-- SLIDE 8 — B1.1.12 & B1.1.13 -->
+<div class="slide" id="slide-8">
+  <div class="section-tag">B1.1.12 / B1.1.13</div>
+  <h2>Phospholipids and Steroids</h2>
+  
+  <h3>The Phospholipid Bilayer (B1.1.12)</h3>
+  <p>Phospholipids exhibit a dual chemical personality—they are <strong>amphipathic</strong>. They possess a hydrophilic (water-loving, polar) phosphate head and two hydrophobic (water-fearing, non-polar) fatty acid tails. When exposed to an aqueous environment (like the inside and outside of a cell), they spontaneously self-assemble into a bilayer:</p>
+  <ul class="bullets">
+    <li>The hydrophilic heads orient outward to interact with the aqueous solutions (cytosol and extracellular fluid).</li>
+    <li>The hydrophobic tails point inward, shielding themselves from water via hydrophobic interactions.</li>
+    <li>This spontaneous arrangement creates the fundamental, semi-permeable structural foundation of all cellular membranes.</li>
+  </ul>
+
+  <h3>Steroid Hormones (B1.1.13)</h3>
+  <p>Steroids are a distinct class of lipids characterized by a carbon skeleton consisting of four fused rings (three 6-sided, one 5-sided). Cholesterol is a primary steroid that serves as a precursor for many vital steroid hormones, including testosterone, estrogen, and cortisol.</p>
+  <div class="app-box">
+    <strong>Application</strong>
+    Because steroid hormones are lipid-based and non-polar, they are inherently hydrophobic. This allows them to effortlessly diffuse directly through the hydrophobic core of the phospholipid bilayer. Once inside the cell, they bind to intracellular receptors to directly influence gene expression, bypassing the need for membrane surface receptors.
+  </div>
+</div>
+
+<!-- SLIDE 9 — CHECK YOUR UNDERSTANDING -->
+<div class="slide" id="slide-9">
+  <div class="section-tag">Review</div>
+  <h2>Check Your Understanding</h2>
+  <p>Test your knowledge of Carbohydrates & Lipids by expanding the questions below.</p>
+  
+  <details>
+    <summary>1. Describe the difference between a condensation reaction and a hydrolysis reaction.</summary>
+    <p>A condensation reaction is an anabolic process where two smaller molecules (monomers) join to form a larger molecule, with the removal and release of a water molecule. Hydrolysis is a catabolic process where a large molecule is broken down into smaller components through the addition of a water molecule, which breaks the covalent bonds.</p>
+  </details>
+
+  <details>
+    <summary>2. Explain why plant cell walls are primarily composed of cellulose rather than starch.</summary>
+    <p>Cellulose is composed of $\beta$-glucose molecules, resulting in straight, unbranched chains that can form strong hydrogen bonds with adjacent chains to create rigid microfibrils. This provides the immense tensile strength needed for a cell wall. Starch is made of $\alpha$-glucose, forming helical or branched structures ideal for compact energy storage, but lacking structural rigidity.</p>
+  </details>
+
+  <details>
+    <summary>3. Why do animals rely predominantly on lipids for long-term energy storage instead of carbohydrates?</summary>
+    <p>Lipids store roughly twice the energy per gram (~38 kJ/g) compared to carbohydrates (~17 kJ/g). Furthermore, because lipids are hydrophobic, they are stored without water, making them significantly lighter to carry. This high energy-to-mass ratio is essential for animal mobility. Additionally, stored lipids provide thermal insulation and physical protection.</p>
+  </details>
+
+  <details>
+    <summary>4. State the structural difference between saturated and monounsaturated fatty acids.</summary>
+    <p>Saturated fatty acids possess no double bonds between carbon atoms in their hydrocarbon chain; they have the maximum possible number of hydrogen atoms and form straight chains. Monounsaturated fatty acids contain exactly one carbon-carbon double bond, which typically creates a bend or kink in the chain.</p>
+  </details>
+</div>
+
+<!-- SLIDE 10 — COMPLETION -->
+<div class="slide" id="slide-10">
+  <div class="completion">
+    <div class="check">✅</div>
+    <h1>B1.1 Complete!</h1>
+    <p>You have successfully reviewed all understandings for Biology Theme B1.1 (Carbohydrates & Lipids).</p>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+  <button class="nav-btn" id="btnPrev" onclick="goTo(-1)">◀ Prev</button>
+  <div class="nav-dots" id="dotsContainer"></div>
+  <div class="nav-counter" id="slideCounter">1 / 11</div>
+  <button class="nav-btn" id="btnNext" onclick="goTo(1)">Next ▶</button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const btnPrev = document.getElementById('btnPrev');
+  const btnNext = document.getElementById('btnNext');
+  const counter = document.getElementById('slideCounter');
+  const progressBar = document.getElementById('progressBar');
+  const dotsContainer = document.getElementById('dotsContainer');
+  
+  // Initialize dots
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'nav-dot';
+    // Mark HL dots
+    if(slide.querySelector('.hl-badge')) dot.classList.add('hl-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => jumpTo(i);
+    dotsContainer.appendChild(dot);
+  });
+  
+  const dots = document.querySelectorAll('.nav-dot');
+  
+  function updateNav() {
+    slides.forEach((s, i) => {
+      s.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+    
+    btnPrev.disabled = currentSlide === 0;
+    btnNext.disabled = currentSlide === totalSlides - 1;
+    counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+    progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  function goTo(dir) {
+    currentSlide += dir;
+    if (currentSlide < 0) currentSlide = 0;
+    if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+    updateNav();
+  }
+  
+  function jumpTo(index) {
+    currentSlide = index;
+    updateNav();
+  }
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' && currentSlide < totalSlides - 1) goTo(1);
+    if (e.key === 'ArrowLeft' && currentSlide > 0) goTo(-1);
+  });
+  
+  updateNav();
+</script>
+</body>
+</html>

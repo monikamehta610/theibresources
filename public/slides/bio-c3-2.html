@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IB DP Biology C3.2 — Defense Against Disease</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Include MathJax for LaTeX math rendering ($...$) -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<style>
+  :root{--blue:#0A6EBD;--blue-light:#E8F4FD;--blue-dark:#064A7A;--orange:#FF6B35;--orange-light:#FFF3ED;--green:#2E8B57;--green-light:#EAF7F0;--red:#C0392B;--red-light:#FDECEB;--yellow:#F0AD4E;--yellow-light:#FFF9E6;--gray-50:#FAFBFC;--gray-100:#F4F5F7;--gray-200:#E8EAED;--gray-400:#9AA0A6;--gray-600:#5F6368;--gray-800:#202124;--hl:#7B2D8E;--hl-light:#F5EAF8;--hl-border:#C9A0DC;
+  --skill:#8e44ad;--skill-light:#f5eef8;--app:#2980b9;--app-light:#ebf5fb;}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:'Sora',-apple-system,sans-serif;background:#fff;color:var(--gray-800);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .slide{display:none;min-height:100vh;padding:3rem 2rem 6rem;max-width:900px;margin:0 auto}.slide.active{display:block}
+  h1{font-size:2.4rem;font-weight:700;line-height:1.2;margin-bottom:.5rem}h2{font-size:1.65rem;font-weight:600;line-height:1.3;margin-bottom:1rem}h3{font-size:1.15rem;font-weight:600;margin-bottom:.5rem}
+  p{margin-bottom:.9rem;font-size:.95rem}strong{font-weight:600}
+  .section-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .7rem;border-radius:4px;margin-bottom:.8rem;background:var(--blue-light);color:var(--blue)}
+  .hl-badge{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;background:var(--hl);color:#fff;margin-left:.5rem;vertical-align:middle}
+  .kt{background:var(--gray-100);border-left:4px solid var(--blue);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1.2rem 0;font-size:.92rem}.kt strong{color:var(--blue);display:block;margin-bottom:.3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+  .card{background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:1.2rem 1.4rem;margin:1rem 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .tbl{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}.tbl th{background:var(--gray-100);font-weight:600;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--gray-200);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gray-600)}.tbl td{padding:.55rem .8rem;border-bottom:1px solid var(--gray-200);vertical-align:top}.tbl tr:last-child td{border-bottom:none}
+  .bullets{list-style:none;padding:0;margin:.8rem 0}.bullets li{position:relative;padding-left:1.4rem;margin-bottom:.5rem;font-size:.92rem}.bullets li::before{content:'';position:absolute;left:0;top:.55rem;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+  .tip{background:var(--orange-light);border-left:4px solid var(--orange);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1.2rem 0;font-size:.88rem}.tip strong{color:var(--orange)}
+  .case{background:var(--green-light);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1rem 0;font-size:.88rem}.case strong{color:var(--green)}
+  
+  .skill-box{background:var(--skill-light);border-left:4px solid var(--skill);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1.2rem 0;font-size:.88rem}.skill-box strong{color:var(--skill);display:block;margin-bottom:.3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+  .app-box{background:var(--app-light);border-left:4px solid var(--app);border-radius:0 8px 8px 0;padding:.9rem 1.2rem;margin:1.2rem 0;font-size:.88rem}.app-box strong{color:var(--app);display:block;margin-bottom:.3rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+
+  .slide-img{width:100%;max-height: 500px; border-radius:10px;margin:1.5rem 0;box-shadow:0 4px 12px rgba(10, 110, 189, 0.15);object-fit:contain; background: #fff;}
+  .cover-img{width:100%;height:35vh;object-fit:cover;border-radius:16px;margin-bottom:2rem;box-shadow:0 4px 20px rgba(0,0,0,.15);object-position:center 40%}
+  
+  /* CSS Flow Diagrams */
+  .css-flow { display: flex; flex-direction: column; gap: 0.5rem; margin: 1.5rem auto; align-items: center; max-width: 600px; }
+  .flow-step { background: var(--gray-50); border: 2px solid var(--blue); border-radius: 8px; padding: 1rem; width: 100%; text-align: center; font-weight: 500; color: var(--gray-800); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+  .flow-arrow { color: var(--blue); font-size: 1.5rem; font-weight: bold; line-height: 1; margin: 0.2rem 0; }
+  .flow-step.alt { border-color: var(--green); background: var(--green-light); color: var(--green); }
+  .flow-step.hl { border-color: var(--hl); background: var(--hl-light); color: var(--hl); }
+
+  /* Interactive Elements */
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 150px;
+    perspective: 1000px;
+    margin: 1rem 0;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .flip-card-front {
+    background-color: var(--blue-light);
+    color: var(--blue);
+    border: 2px solid var(--blue);
+  }
+  .flip-card-front h3 { margin: 0; font-size: 1.5rem; }
+  .flip-card-back {
+    background-color: var(--blue);
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .img-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  details.cyu {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+  }
+  details.cyu:hover {
+    border-color: var(--blue);
+  }
+  details.cyu summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--blue-dark);
+    font-size: 1.05rem;
+  }
+  details.cyu p {
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--gray-200);
+    color: var(--gray-800);
+  }
+
+  .progress-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:var(--blue);z-index:1000;transition:width .3s ease}
+  .nav{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--gray-200);padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:999}
+  .nav-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border:1px solid var(--gray-200);border-radius:8px;background:#fff;color:var(--gray-800);font-family:inherit;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .15s}.nav-btn:hover{background:var(--gray-100);border-color:var(--gray-400)}.nav-btn:disabled{opacity:.3;cursor:default}
+  .nav-dots{display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:60%}.nav-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-200);border:none;cursor:pointer;padding:0;transition:all .2s}.nav-dot.active{background:var(--blue);width:20px;border-radius:4px}.nav-dot.hl-dot.active{background:var(--hl)}
+  .nav-counter{font-size:.72rem;color:var(--gray-400);white-space:nowrap;margin:0 .5rem}
+  .cover{display:flex;flex-direction:column;justify-content:center;min-height:90vh;text-align:center}.cover h1{font-size:2.6rem;margin-bottom:.3rem}.cover .subtitle{font-size:1.1rem;color:var(--gray-600);margin-bottom:2rem}.cover .stats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}.cover .stat{text-align:center}.cover .stat-num{font-size:2rem;font-weight:700;color:var(--blue)}.cover .stat-label{font-size:.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.08em}
+  .completion{text-align:center;padding-top:4rem}.completion .check{font-size:4rem;margin-bottom:1rem}.completion h1{font-size:2rem;margin-bottom:.5rem}.completion .point-count{font-size:3rem;font-weight:700;color:var(--blue);margin:1rem 0}.completion .point-label{font-size:.85rem;color:var(--gray-600)}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1rem 0}.compare-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:1rem}.compare-card h4{font-size:.9rem;margin-bottom:.4rem}.compare-card p{font-size:.85rem;margin:0}.compare-card ul{font-size:.85rem;padding-left:1.2rem;margin:.4rem 0 0}
+  @media(max-width:640px){.slide{padding:2rem 1.2rem 6rem}h1{font-size:1.7rem}h2{font-size:1.3rem}.cover h1{font-size:1.9rem}.cover .stat-num{font-size:1.5rem}.compare-grid{grid-template-columns:1fr}.tbl{font-size:.8rem}.tbl th,.tbl td{padding:.45rem .5rem}.nav-dots{max-width:45%}.nav-dot{width:6px;height:6px}.nav-dot.active{width:14px}.cover-img{height:28vh}}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- SLIDE 0 — COVER -->
+<div class="slide active" id="slide-0">
+  <div class="cover">
+    <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=900&q=80" alt="Microscope view of cells" class="cover-img">
+    <div class="section-tag">IB DP Biology 2025: Interaction and Interdependence</div>
+    <h1>C3.2 — Defense Against Disease</h1>
+    <p class="subtitle">Theme C: Interaction and Interdependence · Standard & Higher Level</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">18</div><div class="stat-label">Understandings</div></div>
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Skills & Apps</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 1 -->
+<div class="slide" id="slide-1">
+  <div class="section-tag">C3.2.1 - C3.2.3</div>
+  <h2>Primary Defenses: The First Line</h2>
+  <div class="kt"><strong>Key Understanding</strong>Pathogens cause infectious diseases. The skin and mucous membranes form primary barriers against these pathogens. Blood clotting seals cuts to prevent entry.</div>
+  
+  <p>Our bodies are constantly exposed to <strong>pathogens</strong>—microorganisms that cause disease (such as bacteria, viruses, fungi, and protozoa). These infectious agents seek to exploit human tissues for their own reproduction. However, our primary defense mechanisms act as formidable, continuous barriers preventing their entry.</p>
+
+  <div class="img-grid">
+    <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=500&q=80" alt="Skin Cells">
+    <img src="https://images.unsplash.com/photo-1583912265927-8c59364b9b9c?w=500&q=80" alt="Microbiology pathogens">
+  </div>
+  
+  <div class="compare-grid">
+    <div class="compare-card">
+      <h4 style="color:var(--blue)">The Skin</h4>
+      <p>A tough, continuous physical and chemical barrier.</p>
+      <ul>
+        <li><strong>Stratum Corneum:</strong> The outermost layer is made of dead, highly keratinized cells that are constantly shed, taking pathogens with them.</li>
+        <li><strong>Sebaceous Glands:</strong> These secrete sebum onto the skin surface, lowering the pH (making it acidic) and inhibiting the growth of harmful bacteria.</li>
+        <li><strong>Dryness:</strong> The relatively dry environment of the skin restricts the moisture that many pathogens need to survive.</li>
+      </ul>
+    </div>
+    <div class="compare-card">
+      <h4 style="color:var(--orange)">Mucous Membranes</h4>
+      <p>Sticky biological traps defending our vulnerable openings.</p>
+      <ul>
+        <li><strong>Locations:</strong> Lining the respiratory, digestive, and urogenital tracts.</li>
+        <li><strong>Mucus:</strong> Goblet cells secrete this thick, sticky glycoprotein layer that physically traps airborne or ingested pathogens.</li>
+        <li><strong>Lysozyme:</strong> Mucus, tears, and saliva contain lysozyme—an antibacterial enzyme that breaks down bacterial cell walls.</li>
+        <li><strong>Cilia:</strong> Hair-like projections sweep trapped pathogens up the respiratory tract to be swallowed and destroyed by stomach acid.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Pathogen</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Any living organism or virus that is capable of causing a disease in a host organism. Examples include bacteria, viruses, fungi, and parasites.</p>
+      </div>
+    </div>
+  </div>
+  
+  <h3 style="margin-top:2rem;">Blood Clotting: The Emergency Seal</h3>
+  <p>When the skin is breached, the body must immediately seal the wound to prevent blood loss and the ingress of pathogens. This relies on a rapid cascade of enzymatic reactions.</p>
+
+  <div class="css-flow">
+    <div class="flow-step">1. Tissue damage exposes blood vessels to pathogens and air.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">2. Platelets (cellular fragments) accumulate at the site and release <strong>clotting factors</strong>.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step alt">3. Clotting factors catalyze the conversion of inactive <strong>Prothrombin</strong> into the active enzyme <strong>Thrombin</strong>.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step alt">4. Thrombin rapidly converts soluble plasma protein <strong>Fibrinogen</strong> into an insoluble network of <strong>Fibrin</strong> fibers.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step hl">5. The Fibrin mesh forms across the wound, trapping erythrocytes (red blood cells) and platelets to form a solid clot (scab).</div>
+  </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide" id="slide-2">
+  <div class="section-tag">C3.2.4 - C3.2.5</div>
+  <h2>Innate vs. Adaptive Immunity</h2>
+  <div class="kt"><strong>Key Understanding</strong>The innate immune system is non-specific and constant. The adaptive immune system is highly specific and builds immunological memory over time.</div>
+  
+  <p>When pathogens successfully breach the primary defenses (skin or mucous membranes), the body initiates an internal immune response. This internal defense is divided into two distinct but deeply cooperative subsystems.</p>
+  
+  <div class="img-grid">
+    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&q=80" alt="White blood cells in blood">
+    <img src="https://images.unsplash.com/photo-1618015359908-7f40fb13066a?w=500&q=80" alt="Scientific research">
+  </div>
+
+  <table class="tbl">
+    <tr><th>Property</th><th>Innate Immune System (2nd Line)</th><th>Adaptive Immune System (3rd Line)</th></tr>
+    <tr>
+      <td><strong>Specificity</strong></td>
+      <td>Non-specific; relies on recognizing broad molecular patterns common to many pathogens.</td>
+      <td>Highly specific; tailored to recognize unique molecular signatures (antigens) of a specific pathogen strain.</td>
+    </tr>
+    <tr>
+      <td><strong>Response Time</strong></td>
+      <td>Rapid response (immediate to hours).</td>
+      <td>Slower response (days to weeks) upon first exposure.</td>
+    </tr>
+    <tr>
+      <td><strong>Memory</strong></td>
+      <td>No immunological memory. The response is identical regardless of how many times the pathogen is encountered.</td>
+      <td>Develops immunological memory. Subsequent exposures trigger a dramatically faster and more potent response.</td>
+    </tr>
+    <tr>
+      <td><strong>Key Cellular Players</strong></td>
+      <td>Phagocytes (Macrophages, Neutrophils), Natural Killer Cells.</td>
+      <td>Lymphocytes (B-cells, Helper T-cells, Cytotoxic T-cells).</td>
+    </tr>
+  </table>
+  
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Phagocytosis</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>The cellular process of engulfing solid particles (like pathogens) by the cell membrane to form an internal phagosome, which is then destroyed by lysosomes.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.5rem">The Innate Response: Phagocytosis</h3>
+  <p>Phagocytic white blood cells (like macrophages) constantly patrol the bloodstream and tissues. When they encounter a pathogen, they recognize it as foreign. The phagocyte extends its membrane to engulf the pathogen via endocytosis, encapsulating it in a vesicle (phagosome). This vesicle then fuses with a <strong>lysosome</strong>, a cellular organelle packed with powerful hydrolytic enzymes, which digests and completely destroys the pathogen.</p>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" id="slide-3">
+  <div class="section-tag">C3.2.6 - C3.2.10</div>
+  <h2>The Adaptive Response: Clonal Selection</h2>
+  <div class="kt"><strong>Key Understanding</strong>Lymphocytes mount a specific adaptive immune response. B-cells multiply by clonal selection to form massive numbers of antibody-secreting plasma cells and long-lived memory cells.</div>
+  
+  <p>The adaptive immune response is the most sophisticated biological defense mechanism. It is fundamentally driven by the recognition of <strong>antigens</strong>—any foreign molecule (usually proteins or large polysaccharides on the surface of pathogens, pollen, or mismatched blood cells) that elicits an immune response.</p>
+  
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Antigen</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>A molecule (usually a protein or glycoprotein) recognized as non-self by the immune system, triggering the production of specific antibodies.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.5rem">The Clonal Selection Cascade</h3>
+  <div class="css-flow">
+    <div class="flow-step">1. <strong>Antigen Presentation:</strong> A macrophage engulfs a pathogen, digests it, and displays its antigens on the macrophage's outer cell membrane.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">2. <strong>T-Cell Activation:</strong> A specific Helper T-cell with a receptor matching the presented antigen binds to the macrophage and becomes activated.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step alt">3. <strong>B-Cell Activation:</strong> The activated Helper T-cell searches for and binds to a specific B-cell that has receptors matching the exact same antigen. The T-cell releases cytokines to activate the B-cell.</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step hl">4. <strong>Clonal Expansion:</strong> The activated B-cell undergoes rapid mitosis, creating thousands of identical clones (clonal selection).</div>
+  </div>
+  
+  <p>Once the massive army of cloned B-cells is generated, they differentiate into two specialized types:</p>
+  <ul class="bullets">
+    <li><strong>Plasma Cells:</strong> These are short-lived, highly active cellular factories loaded with rough endoplasmic reticulum. They pump out massive quantities of specific <strong>antibodies</strong> (immunoglobulins) into the bloodstream. These antibodies bind to the pathogens, neutralizing them and marking them for destruction by macrophages.</li>
+    <li><strong>Memory Cells:</strong> These long-lived cells remain in the circulation for years or decades. If the exact same pathogen is encountered again, memory cells bypass the initial activation steps, dividing rapidly to produce a massive antibody response before symptoms can even develop. This is the biological basis of <strong>immunity</strong>.</li>
+  </ul>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide" id="slide-4">
+  <div class="section-tag">C3.2.13 - C3.2.14</div>
+  <h2>Antibiotics & Bacterial Resistance</h2>
+  <div class="kt"><strong>Key Understanding</strong>Antibiotics block processes that occur in prokaryotic cells but not in eukaryotic cells. The rapid evolution of antibiotic resistance in bacteria is a critical global health crisis.</div>
+  
+  <p>Antibiotics are naturally occurring or synthetic chemicals designed to kill (bactericidal) or inhibit the reproduction (bacteriostatic) of bacteria. They are highly effective because they exploit the biochemical differences between prokaryotic (bacterial) and eukaryotic (human) cells.</p>
+  
+  <p>Antibiotics target structures and metabolic pathways unique to bacteria:</p>
+  <ul class="bullets">
+    <li><strong>Cell Wall Synthesis:</strong> Drugs like Penicillin inhibit the formation of the peptidoglycan cell wall, causing the bacteria to burst due to osmotic pressure. Humans lack cell walls entirely.</li>
+    <li><strong>Protein Synthesis:</strong> Bacteria possess 70S ribosomes, whereas humans have 80S ribosomes. Certain antibiotics bind exclusively to 70S ribosomes, halting bacterial translation.</li>
+    <li><strong>Nucleic Acid Synthesis:</strong> Targeting specific bacterial enzymes used in DNA replication and RNA transcription.</li>
+  </ul>
+  
+  <div class="app-box">
+    <strong>Application: The Viral Immunity to Antibiotics</strong>
+    <p>Viruses are acellular and non-living. They do not possess their own metabolism, ribosomes, or cell walls. Instead, they hijack the eukaryotic machinery of their human host cells to replicate. Because antibiotics exclusively target prokaryotic structures, <strong>antibiotics are entirely ineffective against viral infections</strong> (e.g., the common cold, flu, HIV, COVID-19). Prescribing antibiotics for viral infections contributes heavily to unnecessary resistance.</p>
+  </div>
+  
+  <div class="skill-box">
+    <strong>Skill: Natural Selection & The Rise of Superbugs</strong>
+    <p>Bacterial populations possess immense genetic variation due to rapid reproduction, random mutations, and horizontal gene transfer (swapping plasmids). Occasionally, a random mutation grants a bacterium resistance to a specific antibiotic (e.g., producing an enzyme like penicillinase that destroys the drug).</p>
+    <p>When antibiotics are applied (often unnecessarily or improperly), they act as a severe environmental selective pressure. Susceptible bacteria are eradicated, but the resistant variant survives, reproduces rapidly without competition, and passes on the resistance gene. Over time, the entire population becomes highly resistant. Strains like MRSA (Methicillin-resistant Staphylococcus aureus) are now largely untreatable by standard antibiotics.</p>
+  </div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide" id="slide-5">
+  <div class="section-tag">C3.2.11 - C3.2.12</div>
+  <h2>HIV and the Immune System Breakdown</h2>
+  <div class="kt"><strong>Key Understanding</strong>Transmission of HIV occurs through the exchange of bodily fluids. HIV specifically infects and destroys helper T-lymphocytes, ultimately leading to AIDS.</div>
+  
+  <p>The Human Immunodeficiency Virus (HIV) is a deadly retrovirus. Retroviruses carry their genetic code as RNA and use the enzyme reverse transcriptase to convert it into DNA once inside a host cell, permanently integrating it into the host's genome.</p>
+  
+  <div class="img-grid">
+    <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=500&q=80" alt="Microscopic pathogen view">
+    <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=500&q=80" alt="Blood test">
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-card">
+      <h4 style="color:var(--red)">Mechanism of Viral Attack</h4>
+      <p>HIV does not attack all cells. It uses specific surface glycoproteins to bind to receptors found exclusively on the surface of <strong>Helper T-cells</strong>. The virus enters these critical immune cells, uses them to replicate millions of viral particles, and eventually destroys the T-cell when the new viruses burst out to infect other cells.</p>
+      <p>Because Helper T-cells are the "generals" of the immune system responsible for activating B-cells (for antibodies) and Cytotoxic T-cells, their destruction severely cripples the entire adaptive immune response.</p>
+    </div>
+    <div class="compare-card">
+      <h4 style="color:var(--hl)">Progression to AIDS</h4>
+      <p>HIV infection can remain clinically dormant for years as the immune system fights a losing battle of replacing destroyed Helper T-cells. Eventually, the T-cell count plummets below a critical threshold.</p>
+      <p>At this point, the patient is diagnosed with <strong>Acquired Immunodeficiency Syndrome (AIDS)</strong>. The patient's immune system is so compromised that they lose the ability to fight off mild, everyday pathogens. Death is typically caused by these secondary "opportunistic infections" (like Kaposi's sarcoma or pneumonia), not the HIV virus itself.</p>
+    </div>
+  </div>
+  
+  <div class="tip"><strong>Pathways of Transmission:</strong> HIV cannot survive long outside the body. It is transmitted exclusively through the direct exchange of infected bodily fluids (blood, semen, vaginal secretions, breast milk). Common pathways include unprotected sexual intercourse, sharing contaminated hypodermic needles, receiving unscreened blood transfusions, or transmission from an infected mother to child across the placenta during pregnancy or childbirth.</div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide" id="slide-6">
+  <div class="section-tag">C3.2.16 - C3.2.18</div>
+  <h2>Vaccines and Public Health Epidemiology</h2>
+  <div class="kt"><strong>Key Understanding</strong>Vaccines induce artificial active immunity without causing the disease. Herd immunity provides crucial protection to vulnerable demographics.</div>
+  
+  <p>Vaccination represents one of the greatest triumphs of modern medicine. Vaccines are biological preparations that safely expose the body to a pathogen's antigens, intentionally triggering the primary adaptive immune response without the risk of contracting the severe disease.</p>
+  
+  <p>Vaccines may contain:</p>
+  <ul class="bullets">
+    <li>Live attenuated (weakened) pathogens that reproduce slowly.</li>
+    <li>Killed or inactivated pathogens.</li>
+    <li>Purified subunits (specific antigenic proteins extracted from the pathogen).</li>
+    <li>mRNA that instructs human cells to temporarily produce the viral antigen (e.g., modern COVID-19 vaccines).</li>
+  </ul>
+  <p>The immune system undergoes standard clonal selection, culminating in the massive production of <strong>memory cells</strong>. If the vaccinated individual later encounters the live, virulent pathogen, the secondary response is so rapid and overwhelming that the pathogen is destroyed before it can cause symptoms.</p>
+  
+  <div class="app-box">
+    <strong>Application: The Power of Herd Immunity</strong>
+    <p>Herd immunity occurs when a sufficiently high proportion of a population is immune to a disease (usually achieved via mass vaccination). Because there are so few susceptible hosts available, the pathogen cannot establish a continuous chain of transmission and outbreaks rapidly die out.</p>
+    <p>This is crucial because it provides indirect protection to vulnerable individuals who cannot be vaccinated (e.g., newborn infants, elderly individuals with weakened immunity, or patients undergoing chemotherapy).</p>
+  </div>
+  
+  <div class="skill-box">
+    <strong>Skill: Evaluating Epidemiological Data (e.g., COVID-19)</strong>
+    <p>Epidemiology involves analyzing the incidence and distribution of diseases. Students must be prepared to evaluate data tables, logarithmic graphs, and statistics related to pandemics like SARS-CoV-2. You should understand concepts like $R_0$ (the basic reproduction number—how many people an infected person will transmit the disease to in a totally susceptible population) and how vaccination rollouts directly correlate with steep declines in hospitalization and mortality rates.</p>
+  </div>
+  
+  <div class="case">
+    <strong>Zoonoses: Pathogens Jumping the Species Barrier (C3.2.15)</strong>
+    <p>A zoonosis is an infectious disease that has jumped from a non-human animal to humans. Many of history's deadliest diseases originated this way. The closer humans encroach on wild habitats (through deforestation or wet markets), the higher the risk of transmission. Well-known zoonoses include COVID-19 (likely originating in bats), HIV (from chimpanzees), Ebola, and Avian Influenza.</p>
+  </div>
+</div>
+
+<!-- SLIDE 7 — COMPLETION & REVIEW -->
+<div class="slide" id="slide-7">
+  <div class="completion" style="padding-top: 2rem;">
+    <div class="check">✅</div>
+    <h1>C3.2 Defense Against Disease Complete!</h1>
+    <p>You have successfully reviewed all SL and HL understandings for Biology Theme C3.2.</p>
+    
+    <div style="text-align:left; max-width:600px; margin: 3rem auto;">
+      <h3 style="text-align:center; color:var(--blue-dark); margin-bottom:1rem;">Check Your Understanding</h3>
+      
+      <details class="cyu">
+        <summary>Why are antibiotics ineffective against viruses?</summary>
+        <p>Antibiotics work by targeting metabolic processes or structures unique to prokaryotic bacterial cells (e.g., 70S ribosomes or peptidoglycan cell walls). Viruses are acellular, non-living, and lack these structures. They rely entirely on eukaryotic host cell machinery to replicate, which antibiotics do not affect.</p>
+      </details>
+      
+      <details class="cyu">
+        <summary>Describe the role of memory cells in immunity.</summary>
+        <p>Memory cells are long-lived lymphocytes produced during the primary immune response. They circulate in the body for years. Upon re-exposure to the exact same antigen, memory cells rapidly divide and differentiate to produce a massive, immediate antibody response, neutralizing the pathogen before symptoms develop.</p>
+      </details>
+
+      <details class="cyu">
+        <summary>Outline the cascade of blood clotting.</summary>
+        <p>Tissue damage causes platelets to release clotting factors. These factors catalyze inactive prothrombin into active thrombin. Thrombin then acts as an enzyme to convert soluble fibrinogen into insoluble fibrin strands. Fibrin forms a mesh that traps red blood cells and platelets, sealing the wound.</p>
+      </details>
+
+      <details class="cyu">
+        <summary>How does HIV compromise the immune system?</summary>
+        <p>HIV selectively infects and destroys Helper T-cells. Because Helper T-cells are required to activate B-cells (which produce antibodies), their loss cripples the adaptive immune response. When T-cell levels fall low enough, the patient develops AIDS and is vulnerable to opportunistic infections.</p>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+  <button class="nav-btn" id="btnPrev" onclick="goTo(-1)">◀ Prev</button>
+  <div class="nav-dots" id="dotsContainer"></div>
+  <div class="nav-counter" id="slideCounter">1 / 7</div>
+  <button class="nav-btn" id="btnNext" onclick="goTo(1)">Next ▶</button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const btnPrev = document.getElementById('btnPrev');
+  const btnNext = document.getElementById('btnNext');
+  const counter = document.getElementById('slideCounter');
+  const progressBar = document.getElementById('progressBar');
+  const dotsContainer = document.getElementById('dotsContainer');
+  
+  // Initialize dots
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'nav-dot';
+    // Mark HL dots
+    if(slide.querySelector('.hl-badge')) dot.classList.add('hl-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => jumpTo(i);
+    dotsContainer.appendChild(dot);
+  });
+  
+  const dots = document.querySelectorAll('.nav-dot');
+  
+  function updateNav() {
+    slides.forEach((s, i) => {
+      s.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+    
+    btnPrev.disabled = currentSlide === 0;
+    btnNext.disabled = currentSlide === totalSlides - 1;
+    counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+    progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  function goTo(dir) {
+    currentSlide += dir;
+    if (currentSlide < 0) currentSlide = 0;
+    if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+    updateNav();
+  }
+  
+  function jumpTo(index) {
+    currentSlide = index;
+    updateNav();
+  }
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' && currentSlide < totalSlides - 1) goTo(1);
+    if (e.key === 'ArrowLeft' && currentSlide > 0) goTo(-1);
+  });
+  
+  updateNav();
+</script>
+</body>
+</html>

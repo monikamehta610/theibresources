@@ -1,0 +1,32 @@
+{
+  "name": "theibresources",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:cf": "next build && npx @cloudflare/next-on-pages@1 --experimental-minify && npx next-sitemap",
+    "preview": "npx wrangler pages dev ./out",
+    "start": "next start",
+    "lint": "eslint",
+    "sitemap": "npx next-sitemap"
+  },
+  "dependencies": {
+    "next": "15.5.2",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.0",
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "next-sitemap": "^4.2.3",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5",
+    "wrangler": "^3.80.0"
+  }
+}
